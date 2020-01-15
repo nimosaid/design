@@ -1,123 +1,365 @@
-<!DOCTYPE html>
-<html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<title>LoginDesign</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LoginDesign</title>
-    <link href="css/login.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/bootstrap.css" type="css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/login.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
-    </script>
-
-</head>
-<body>
-  <style>
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background: #eedc12;
 }
 
-.sidenav {
+input, button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.tip {
+  font-size: 20px;
+  margin: 40px auto 50px;
+  text-align: center;
+}
+
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 550px;
+  margin: 0 auto 100px;
+  background: #fff;
+}
+
+.form {
+  position: relative;
+  width: 640px;
   height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: none;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+  padding: 50px 30px 0;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  font-weight:bold;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: black;
-}
-
-.sidenav .closebtn {
+.sub-cont {
+  overflow: hidden;
   position: absolute;
+  left: 640px;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  width: 900px;
+  height: 100%;
+  padding-left: 260px;
+  background: #fff;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+.cont.s--signup .sub-cont {
+  -webkit-transform: translate3d(-640px, 0, 0);
+          transform: translate3d(-640px, 0, 0);
 }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
+button {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 36px;
+  border-radius: 30px;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.img {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  padding-top: 360px;
+}
+.img:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  background-image: url("https://www.rd.com/wp-content/uploads/2018/01/South-Africa_Amazing-Photos-of-Towns-with-Colorful-Houses-Around-the-World-760x506.jpg");
+  background-size: cover;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+.img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.cont.s--signup .img:before {
+  -webkit-transform: translate3d(640px, 0, 0);
+          transform: translate3d(640px, 0, 0);
+}
+.img__text {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+.img__text h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.img__text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cont.s--signup .img__text.m--up {
+  -webkit-transform: translateX(520px);
+          transform: translateX(520px);
+}
+.img__text.m--in {
+  -webkit-transform: translateX(-520px);
+          transform: translateX(-520px);
+}
+.cont.s--signup .img__text.m--in {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.img__btn {
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 100px;
+  height: 36px;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+.img__btn:after {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+.img__btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: -webkit-transform 1.2s;
+  transition: transform 1.2s;
+  transition: transform 1.2s, -webkit-transform 1.2s;
+}
+.img__btn span.m--in {
+  -webkit-transform: translateY(-72px);
+          transform: translateY(-72px);
+}
+.cont.s--signup .img__btn span.m--in {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.cont.s--signup .img__btn span.m--up {
+  -webkit-transform: translateY(72px);
+          transform: translateY(72px);
+}
+
+h2 {
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+label span {
+  font-size: 12px;
+  color: grey;
+  text-transform: uppercase;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.forgot-pass {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: grey;
+}
+
+.submit {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: #d4af7a;
+  text-transform: uppercase;
+}
+
+.fb-btn {
+  border: 2px solid #d3dae9;
+  color: #8fa1c7;
+}
+.fb-btn span {
+  font-weight: bold;
+  color: black;
+}
+
+.sign-in {
+  transition-timing-function: ease-out;
+}
+.cont.s--signup .sign-in {
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+  -webkit-transform: translate3d(640px, 0, 0);
+          transform: translate3d(640px, 0, 0);
+}
+
+.sign-up {
+  -webkit-transform: translate3d(-900px, 0, 0);
+          transform: translate3d(-900px, 0, 0);
+}
+.cont.s--signup .sign-up {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.icon-link {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 32px;
+}
+.icon-link img {
+  width: 100%;
+  vertical-align: top;
+}
+.icon-link--twitter {
+  left: auto;
+  right: 5px;
 }
 </style>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Leave</a>
-  <br>
-  <a href="#">Pay stub</a>
-  <br>
-  <a href="#">Advance pay</a>
-  <br>
-  <a href="#">History</a>
-</div>
-
-<div id="main">
-  
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-</div>
-
 <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
+  window.console = window.console || function(t) {};
 </script>
-	<div class="main">
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<p class="tip">Click on button in image container</p>
+<div class="cont">
+<div class="form sign-in" style="text-align:center;">
+<br>
+	<img class="fixed-logo"  src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-color-195.png" width="180px" alt="Sanergy">
     <br>
-    <br>
-		<div class="header">
-			<img class="fixed-logo"  src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-color-195.png" width="180px" alt="Sanergy">
-		</div>
-		<div class="intro">
-			<p>Request for your leave</p>
-		</div>
-		<hr>
-		<div class="textinput">
-			<input class="form" type="text" name="add-items" autocomplete="off" placeholder="reason">
-      <input class="form" type="text" name="add-items" autocomplete="off" placeholder="reason">
-      <input class="form" type="text" name="add-items" autocomplete="off" placeholder="reason">
-      <input class="form" type="text" name="add-items" autocomplete="off" placeholder="reason">
-      <input class="button" type="submit" value="Submit">
-		</div>
-    <br>
-    
-		<hr>
-		
-	</div>
-	
-	
-</body>
-</html>
+<br>
+<h2>Welcome back,</h2>
+<label>
+<span>Email</span>
+<input type="email">
+</label>
+<label>
+<span>Password</span>
+<input type="password">
+</label>
+<p class="forgot-pass">Forgot password?</p>
+<button type="button" class="submit">Sign In</button>
+<button type="button" class="fb-btn">Connect with <span>Google</span></button>
+</div>
+<div class="sub-cont">
+<div class="img">
+<div class="img__text m--up">
+<h2>New here?</h2>
+<p>Sign up and discover great amount of new opportunities!</p>
+</div>
+<div class="img__text m--in">
+<h2>One of us?</h2>
+<p>If you already has an account, just sign in. We've missed you!</p>
+</div>
+<div class="img__btn">
+<span class="m--up">Sign Up</span>
+<span class="m--in">Sign In</span>
+</div>
+</div>
+<div class="form sign-up" style="text-align:center;">
+<img class="fixed-logo"  src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-color-195.png" width="180px" alt="Sanergy">
+<br>
+<br>
+<h2>Time to feel like home,</h2>
+<label>
+<span>Name</span>
+<input type="text">
+</label>
+<label>
+<span>Email</span>
+<input type="email">
+</label>
+<label>
+<span>Password</span>
+<input type="password">
+</label>
+<button type="button" class="submit">Sign Up</button>
+<button type="button" class="fb-btn">Join with <span>Google</span></button>
+<br>
+</div>
+<br>
+<br>
+</div>
+<br>
+<br>
+</div>
+
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-30d18ea41045577cdb11c797602d08e0b9c2fa407c8b81058b1c422053ad8041.js"></script>
+<script id="rendered-js">
+document.querySelector('.img__btn').addEventListener('click', function () {
+  document.querySelector('.cont').classList.toggle('s--signup');
+});
+//# sourceURL=pen.js
+    </script>
+
+
+</body></html>

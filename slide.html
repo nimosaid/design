@@ -1,0 +1,881 @@
+
+<!-- style for the sliders -->
+
+<!-- <style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style> -->
+
+<!-- end of styling for slidder -->
+
+<!--  start of styling for the cards -->
+
+<!-- <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 100px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
+
+
+
+</head> 
+
+
+<body>
+
+<!-- start of the slider code 
+
+<div class="slideshow-container">
+<br>
+<br>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="img/img2.jpeg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="img/img3.jpeg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="img/img4.jpeg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<br>
+<br>
+<br>
+<br> -->
+
+<!-- end of slider code  -->
+
+
+
+<html lang="en"><head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - Horizontal parallax sliding slider  with Swiper.js</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+<style>
+[class^="swiper-button-"] {
+  transition: all .3s ease;
+}
+
+.swiper-slide {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 80%;
+  height: 100vh;
+  float: left;
+  transition: opacity .6s ease, -webkit-transform .3s ease;
+  transition: opacity .6s ease, transform .3s ease;
+  transition: opacity .6s ease, transform .3s ease, -webkit-transform .3s ease;
+}
+.swiper-container.nav-slider {
+  width: 20%;
+  padding-left: 5px;
+}
+.swiper-container.nav-slider .swiper-slide {
+  cursor: pointer;
+  opacity: .4;
+  transition: opacity .3s ease;
+}
+.swiper-container.nav-slider .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.swiper-container.nav-slider .swiper-slide .content {
+  width: 100%;
+}
+.swiper-container.nav-slider .swiper-slide .content .title {
+  font-size: 20px;
+}
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+.swiper-container.loading {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+.swiper-slide .slide-bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide .entity-img {
+  display: none;
+}
+.swiper-slide .content {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 50%;
+  padding-left: 5%;
+  color: #fff;
+}
+.swiper-slide .content .title {
+  font-size: 2.6em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.swiper-slide .content .caption {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  opacity: 0;
+  transition: opacity .3s ease, -webkit-transform .7s ease;
+  transition: opacity .3s ease, transform .7s ease;
+  transition: opacity .3s ease, transform .7s ease, -webkit-transform .7s ease;
+}
+.swiper-slide .content .caption.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+[class^="swiper-button-"] {
+  width: 44px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper-button-prev {
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+}
+
+.swiper-button-next {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="swiper-container main-slider swiper-container-horizontal" style="cursor: grab;">
+<div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-519px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="0" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E&quot;); transform: translateX(259.5px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Shaun Matthews</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="1" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg&quot;); transform: translateX(0px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Alexis Berry</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="2" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s&quot;); transform: translateX(-259.5px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Billie	Pierce</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk&quot;); transform: translateX(-519px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Trevor	Copeland</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM&quot;); transform: translateX(-778.5px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Bernadette	Newman</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div>
+<div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E&quot;); transform: translateX(-1038px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Shaun Matthews</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div>
+<div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="1" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg&quot;); transform: translateX(-1297.5px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Alexis Berry</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div>
+<div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="2" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s&quot;); transform: translateX(-1557px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Billie	Pierce</p>
+<span class="caption show">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div>
+<div class="swiper-slide" data-swiper-slide-index="3" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk&quot;); transform: translateX(-1816.5px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Trevor	Copeland</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div>
+<div class="swiper-slide" data-swiper-slide-index="4" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM&quot;); transform: translateX(-2076px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Bernadette	Newman</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div>
+<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E&quot;); transform: translateX(-2335.5px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Shaun Matthews</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg&quot;); transform: translateX(-2595px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Alexis Berry</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s&quot;); transform: translateX(-2854.5px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Billie	Pierce</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk&quot;); transform: translateX(-3114px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Trevor	Copeland</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 519px; transition: all 0ms ease 0s;">
+<figure class="slide-bgimg" style="background-image: url(&quot;https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM&quot;); transform: translateX(-3373.5px); transition: all 0ms ease 0s;">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Bernadette	Newman</p>
+<span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+</div>
+</div></div>
+
+<div class="swiper-button-prev swiper-button-white"></div>
+<div class="swiper-button-next swiper-button-white"></div>
+</div>
+
+<div class="swiper-container nav-slider swiper-container-vertical">
+<div class="swiper-wrapper" role="navigation" style="transition-duration: 0ms; transform: translate3d(0px, 50px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="0" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Shaun Matthews</p>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="1" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Alexis Berry</p>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="2" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Billie	Pierce</p>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Trevor	Copeland</p>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Bernadette	Newman</p>
+</div>
+</div>
+<div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Shaun Matthews</p>
+</div>
+</div>
+<div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="1" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Alexis Berry</p>
+</div>
+</div>
+<div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="2" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Billie	Pierce</p>
+</div>
+</div>
+<div class="swiper-slide" data-swiper-slide-index="3" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Trevor	Copeland</p>
+</div>
+</div>
+<div class="swiper-slide" data-swiper-slide-index="4" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Bernadette	Newman</p>
+</div>
+</div>
+<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Shaun Matthews</p>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Alexis Berry</p>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Billie	Pierce</p>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLVUpEems2ZXpHYVk" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Trevor	Copeland</p>
+</div>
+</div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="height: 45px; margin-bottom: 5px;">
+<figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM)">
+<img src="https://drive.google.com/uc?export=view&amp;id=0B_koKn2rKOkLNXBIcEdOUFVIWmM" class="entity-img">
+</figure>
+<div class="content">
+<p class="title">Bernadette	Newman</p>
+</div>
+</div></div>
+</div>
+<br>
+<br>
+<br>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
+
+<style>
+/* .container {
+  position: relative;
+  text-align: center;
+  color: white;
+} */
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<br>
+<hr>
+<br>
+<br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="img/img1.jpeg" alt="Avatar" style="width:100%">
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-30d18ea41045577cdb11c797602d08e0b9c2fa407c8b81058b1c422053ad8041.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+<script id="rendered-js">
+// Params
+let mainSliderSelector = '.main-slider',
+navSliderSelector = '.nav-slider',
+interleaveOffset = 0.5;
+
+// Main Slider
+let mainSliderOptions = {
+  loop: true,
+  speed: 1000,
+  autoplay: {
+    delay: 3000 },
+
+  loopAdditionalSlides: 10,
+  grabCursor: true,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev' },
+
+  on: {
+    init: function () {
+      this.autoplay.stop();
+    },
+    imagesReady: function () {
+      this.el.classList.remove('loading');
+      this.autoplay.start();
+    },
+    slideChangeTransitionEnd: function () {
+      let swiper = this,
+      captions = swiper.el.querySelectorAll('.caption');
+      for (let i = 0; i < captions.length; ++i) {if (window.CP.shouldStopExecution(0)) break;
+        captions[i].classList.remove('show');
+      }window.CP.exitedLoop(0);
+      swiper.slides[swiper.activeIndex].querySelector('.caption').classList.add('show');
+    },
+    progress: function () {
+      let swiper = this;
+      for (let i = 0; i < swiper.slides.length; i++) {if (window.CP.shouldStopExecution(1)) break;
+        let slideProgress = swiper.slides[i].progress,
+        innerOffset = swiper.width * interleaveOffset,
+        innerTranslate = slideProgress * innerOffset;
+
+        swiper.slides[i].querySelector(".slide-bgimg").style.transform =
+        "translateX(" + innerTranslate + "px)";
+      }window.CP.exitedLoop(1);
+    },
+    touchStart: function () {
+      let swiper = this;
+      for (let i = 0; i < swiper.slides.length; i++) {if (window.CP.shouldStopExecution(2)) break;
+        swiper.slides[i].style.transition = "";
+      }window.CP.exitedLoop(2);
+    },
+    setTransition: function (speed) {
+      let swiper = this;
+      for (let i = 0; i < swiper.slides.length; i++) {if (window.CP.shouldStopExecution(3)) break;
+        swiper.slides[i].style.transition = speed + "ms";
+        swiper.slides[i].querySelector(".slide-bgimg").style.transition =
+        speed + "ms";
+      }window.CP.exitedLoop(3);
+    } } };
+
+
+let mainSlider = new Swiper(mainSliderSelector, mainSliderOptions);
+
+// Navigation Slider
+let navSliderOptions = {
+  loop: true,
+  loopAdditionalSlides: 10,
+  speed: 1000,
+  spaceBetween: 5,
+  slidesPerView: 5,
+  centeredSlides: true,
+  touchRatio: 0.2,
+  slideToClickedSlide: true,
+  direction: 'vertical',
+  on: {
+    imagesReady: function () {
+      this.el.classList.remove('loading');
+    },
+    click: function () {
+      mainSlider.autoplay.stop();
+    } } };
+
+
+let navSlider = new Swiper(navSliderSelector, navSliderOptions);
+
+// Matching sliders
+mainSlider.controller.control = navSlider;
+navSlider.controller.control = mainSlider;
+//# sourceURL=pen.js
+    </script>
+
+
+</body>
+</html>
+

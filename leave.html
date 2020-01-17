@@ -106,15 +106,56 @@ function closeNav() {
 			<img class="fixed-logo"  src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-color-195.png" width="180px" alt="Sanergy">
 		</div>
 		<div class="intro">
-			<p>Request for your leave</p>
+			<p>Apply for your leave</p>
 		</div>
 		<hr>
-		<div class="textinput">
-			<input class="form" type="text" name="add-items" autocomplete="off" placeholder="reason">
-      <input class="form" type="text" name="add-items" autocomplete="off" placeholder="reason">
-      <input class="form" type="text" name="add-items" autocomplete="off" placeholder="reason">
-      <input class="form" type="text" name="add-items" autocomplete="off" placeholder="reason">
-      <input class="button" type="submit" value="Submit">
+    <br>
+    <br>
+		<div class="textinput"  style="text-align:center; color:white;">
+    <form method="post"> 
+			<label for="appointment_for" >Leave Type :</label>
+        <select id="appointment_for" name="appointment_for" required class="form">
+          <option value="coffee">Maternity Leave</option>
+          <option value="meeting">Parternity Leave</option>
+          <option value="Business">Annual Leave</option>
+          <option value="lunch">Sick Leave</option>
+          <option value="skype">Study Leave</option>
+        </select>
+        <br>
+        <br>
+        
+        <label for="date">Start Date:</label>
+        <input type="date" name="date" value="" required class="form"></input>
+        <br>
+        <br>
+        <label for="date">End Date:</label>
+        <input type="date" name="date" value="" required class="form"></input>
+        <br>
+        <br>
+
+        <label for="appointment_description">Comments:</label>
+        <textarea id="appointment_description" name="appointment_description" placeholder="" class="form"></textarea>
+
+        <br>
+        <br>
+
+        <label for="appointment_description">Coverage:</label>
+        <textarea id="appointment_description" name="appointment_description" placeholder="" class="form"></textarea>
+        
+        <br>
+        <br>
+
+        <button type="submit" style=" padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: blue;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  border: 1px solid blue;
+  border-width: 1px 1px 3px;
+  ">Request For Appointment</button>
+      
 		</div>
     <br>
     

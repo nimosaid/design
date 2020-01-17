@@ -1,0 +1,306 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>prof</title>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic">
+  
+<style>
+/*LESS Vars*/
+/*Styles for user profile panel*/
+.user {
+  position: relative;
+  transition: 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.user-avatar {
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.user-avatar-edit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.54) !important;
+  opacity: 0;
+  transition: opacity 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.user-avatar-edit md-icon {
+  color: rgba(255, 255, 255, 0.87);
+}
+.user-avatar:hover {
+  transition: 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.user-avatar-edit:hover,
+.user-avatar:hover + .user-avatar-edit {
+  opacity: 1;
+}
+.user-name {
+  font-size: 24px;
+}
+.user-title {
+  color: rgba(0, 0, 0, 0.38);
+  font-weight: 500;
+  margin-top: 0;
+}
+.user-input-container {
+  box-sizing: border-box;
+  width: 100%;
+}
+.user-name,
+.user-title {
+  background-image: none !important;
+}
+.user-name.md-input[disabled],
+.user-title.md-input[disabled] {
+  color: rgba(0, 0, 0, 0.87);
+}
+@media (max-width: 599px) {
+  .user {
+    padding-right: 0;
+    margin-bottom: 16px;
+  }
+  .user-avatar {
+    width: 120px;
+    height: 120px;
+    margin-right: 16px;
+  }
+  .user-avatar-edit {
+    top: 36px;
+    left: 30px;
+  }
+  .md-toolbar-tools > md-menu {
+    padding: 0;
+  }
+}
+@media (max-width: 959px) and (min-width: 600px) {
+  .user {
+    padding-right: 24px;
+  }
+  .user-avatar {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 16px;
+  }
+  .user-avatar-edit {
+    top: 76px;
+    left: 70px;
+  }
+  .user-input-container {
+    padding-left: 8px;
+    width: 200px;
+  }
+}
+@media (min-width: 960px) {
+  .user {
+    padding-right: 24px;
+  }
+  .user-avatar {
+    width: 260px;
+    height: 260px;
+  }
+  .user-avatar-edit {
+    top: 106px;
+    left: 100px;
+  }
+  .user-input-container {
+    width: 250px;
+    text-overflow: ellipsis;
+    padding-left: 24px;
+  }
+}
+body {
+  background: #f2f2f2;
+  padding: 16px;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div ng-app="userProfile" ng-controller="Ctrl" class="ng-scope">
+  <md-card class="md-default-theme">
+    <md-toolbar class="md-default-theme">
+      <div class="md-toolbar-tools">
+        <h2>
+          <img class="fixed-logo"  src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-color-195.png" width="180px" alt="Sanergy">
+        </h2>
+        <span class="flex"></span>
+        <!-- ngIf: viewMode --><button class="md-icon-button md-button ng-scope md-default-theme" ng-transclude="" ng-if="viewMode" ng-click="switchMode()">
+          
+          <md-icon class="ng-scope ng-isolate-scope md-default-theme material-icons">mode_edit</md-icon>
+        </button><!-- end ngIf: viewMode -->
+        <!-- ngIf: !viewMode -->
+        <md-menu class="md-menu ng-scope">
+          <button class="md-icon-button md-button md-default-theme" ng-transclude="" ng-click="$mdOpenMenu($event)" type="button" aria-haspopup="true" aria-expanded="false">
+            
+            <md-icon class="ng-scope ng-isolate-scope md-default-theme material-icons">more_vert</md-icon>
+          </button>
+          
+        </md-menu>
+      </div>
+    </md-toolbar>
+    <md-card-content class="md-layout-gt-sm-row md-layout-sm-column">
+      <div class="user md-layout-gt-sm-column md-layout-sm-row">
+        <img src="https://lh3.googleusercontent.com/-W2XryVdi-lA/U6tSAh3SsbI/AAAAAAAAFGY/ZHJiUEcR_Zs/w480-h480/avatar%2Bmaterial%2Bdesign.png" alt="user avatar" class="user-avatar">
+        <button class="md-icon-button user-avatar-edit md-button md-default-theme" ng-transclude="" ng-click="browserAvatar()">
+          <md-icon class="ng-scope ng-isolate-scope md-default-theme material-icons">photo_camera</md-icon>
+        </button>
+        <form name="userBasicInfoForm" class="flex ng-pristine ng-valid md-layout-column layout-align-start layout-align-sm-center-start ng-valid-required">
+          <md-input-container class="user-input-container md-input-has-messages md-default-theme md-input-has-value" style="height: auto;">
+            <label for="input_0">Name</label>
+            <textarea name="userName" required="" class="user-name ng-pristine ng-untouched ng-valid flex md-input ng-valid-required" ng-model="user.name" ng-disabled="viewMode" id="input_0" rows="1" aria-multiline="true" aria-disabled="true" disabled="disabled" aria-required="false" aria-invalid="false" style="height: 30px;"></textarea>
+            <div ng-messages="userBasicInfoForm.userName.$error" aria-live="assertive" class="ng-inactive">
+              <!-- ngMessage: required -->
+            </div>
+          </md-input-container>
+          <md-input-container class="user-input-container md-input-has-messages md-default-theme md-input-has-value">
+            <label for="input_1">Title</label>
+            <input name="userTitle" required="" class="user-title ng-pristine ng-untouched ng-valid md-input ng-valid-required" ng-model="user.title" ng-disabled="viewMode" id="input_1" aria-disabled="true" disabled="disabled" aria-required="false" aria-invalid="false">
+            <div ng-messages="userBasicInfoForm.userTitle.$error" aria-live="assertive" class="ng-inactive">
+              <!-- ngMessage: required -->
+            </div>
+          </md-input-container>
+        </form>
+      </div>
+      <form name="userDetailsForm" class="flex ng-pristine ng-valid ng-valid-required ng-valid-email">
+        <div class="md-layout-column md-layout-gt-sm-row">
+          <md-input-container class="flex md-input-has-messages md-default-theme md-input-has-value">
+            <label for="input_2">Department</label>
+            <input required="" name="userDepartment" ng-model="user.department" ng-disabled="viewMode" class="ng-pristine ng-untouched ng-valid md-input ng-valid-required" id="input_2" aria-disabled="true" disabled="disabled" aria-required="false" aria-invalid="false">
+            <div ng-messages="userDetailsForm.userDepartment.$error" aria-live="assertive" class="ng-inactive">
+              <!-- ngMessage: required -->
+            </div>
+          </md-input-container>
+          <md-input-container class="flex md-input-has-messages md-default-theme md-input-has-value" style="height: auto;">
+            <label for="input_3">Location</label>
+            <textarea name="userLocation" required="" ng-model="user.location" ng-disabled="viewMode" class="ng-pristine ng-untouched ng-valid md-input ng-valid-required" id="input_3" rows="1" aria-multiline="true" aria-disabled="true" disabled="disabled" aria-required="false" aria-invalid="false" style="height: 30px;"></textarea>
+            <div ng-messages="userDetailsForm.userLocation.$error" aria-live="assertive" class="ng-inactive">
+              <!-- ngMessage: required -->
+            </div>
+          </md-input-container>
+        </div>
+        <div class="md-layout-column md-layout-gt-sm-row">
+          <md-input-container class="flex md-input-has-messages md-default-theme md-input-has-value">
+            <label for="input_4">Company</label>
+            <input name="userCompany" required="" ng-model="user.company" ng-disabled="viewMode" class="ng-pristine ng-untouched ng-valid md-input ng-valid-required" id="input_4" aria-disabled="true" disabled="disabled" aria-required="false" aria-invalid="false">
+            <div ng-messages="userDetailsForm.userCompany.$error" aria-live="assertive" class="ng-inactive">
+              <!-- ngMessage: required -->
+            </div>
+          </md-input-container>
+          <md-input-container class="flex md-input-has-messages md-default-theme md-input-has-value">
+            <label for="input_5">Manager</label>
+            <input name="userManager" required="" ng-model="user.manager" ng-disabled="viewMode" class="ng-pristine ng-untouched ng-valid md-input ng-valid-required" id="input_5" aria-disabled="true" disabled="disabled" aria-required="false" aria-invalid="false">
+            <div ng-messages="userDetailsForm.userManager.$error" aria-live="assertive" class="ng-inactive">
+              <!-- ngMessage: required -->
+            </div>
+          </md-input-container>
+        </div>
+        <div class="md-layout-column md-layout-gt-sm-row">
+          <md-input-container class="flex md-input-has-messages md-default-theme md-input-has-value">
+            <label for="input_6">Work Phone</label>
+            <input type="tel" name="userWorkPhone" required="" ng-model="user.workPhone" ng-disabled="viewMode" class="ng-pristine ng-untouched ng-valid md-input ng-valid-required" id="input_6" aria-disabled="true" disabled="disabled" aria-required="false" aria-invalid="false">
+            <div ng-messages="userDetailsForm.userWorkPhone.$error" aria-live="assertive" class="ng-inactive">
+              <!-- ngMessage: required -->
+            </div>
+          </md-input-container>
+          <md-input-container class="flex md-default-theme md-input-has-value">
+            <label for="input_7">Mobile Phone</label>
+            <input type="tel" ng-model="user.mobilePhone" ng-disabled="viewMode" class="ng-pristine ng-untouched ng-valid md-input" id="input_7" aria-disabled="true" disabled="disabled" aria-invalid="false">
+          </md-input-container>
+        </div>
+        <md-input-container class="md-input-has-messages md-default-theme md-input-has-value">
+          <label for="input_8">Alias</label>
+          <input type="email" name="userAlias" ng-model="user.alias" ng-disabled="viewMode" class="ng-pristine ng-untouched ng-valid md-input ng-valid-email" id="input_8" aria-disabled="true" disabled="disabled" aria-invalid="false">
+            <div ng-messages="userDetailsForm.userAlias.$error" aria-live="assertive" class="ng-inactive">
+              <!-- ngMessage: email -->
+            </div>
+        </md-input-container>
+        <md-input-container class="md-input-has-messages md-default-theme md-input-has-value">
+          <label for="input_9">Other Email</label>
+          <input type="email" name="userOtherEmail" ng-model="user.otherEmail" ng-disabled="viewMode" class="ng-pristine ng-untouched ng-valid md-input ng-valid-email" id="input_9" aria-disabled="true" disabled="disabled" aria-invalid="false">
+            <div ng-messages="userDetailsForm.userOtherEmail.$error" aria-live="assertive" class="ng-inactive">
+              <!-- ngMessage: email -->
+            </div>
+        </md-input-container>
+      </form>
+    </md-card-content>
+  </md-card>
+</div>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-30d18ea41045577cdb11c797602d08e0b9c2fa407c8b81058b1c422053ad8041.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-messages.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
+  
+      <script id="rendered-js">
+angular.module('userProfile', ['ngMaterial', 'ngMessages']).
+controller('Ctrl', function ($scope) {
+  $scope.viewMode = true;
+
+  // Switch between view mode and edit mode
+  $scope.switchMode = function () {
+    return $scope.viewMode = !$scope.viewMode;
+  };
+
+  // Save the changes
+  $scope.saveChanges = function () {
+    /*Validate the input
+                                    Save the changes*/
+  };
+
+  // User data
+  $scope.user = {
+    name: 'Adam Luxor',
+    title: 'VP of User Experience',
+    department: 'Product',
+    location: 'Atlanta',
+    company: 'BetterCloud',
+    manager: 'Emily Morgan',
+    workPhone: '404-555-1212',
+    mobilePhone: '404-555-6789',
+    alias: 'adam.luxor@companyname.com',
+    otherEmail: 'adaml@someothercompany.com' };
+
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+  
+
+
+
+
+ 
+</body></html>

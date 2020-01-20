@@ -5,7 +5,7 @@ html {
 }
 
 body {
-	background: url("https://images.unsplash.com/photo-1558642084-fd07fae5282e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat center center fixed;
+	background: url("https://images.unsplash.com/photo-1479920252409-6e3d8e8d4866?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,14 +16,14 @@ h1 {
 	font-family: 'Fira Sans', sans-serif;
 	font-weight: 700;
 	font-size: 1.7em;
-	color: #ffffff
+	color: black;
 }
 
 .intro > p {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 300;
 	font-size: 1em;
-	color: white;
+	color: black;
 }
 
 .main {
@@ -38,7 +38,7 @@ h1 {
 	-moz-border-radius: 10px 10px 10px 10px;
 	-webkit-border-radius: 10px 10px 10px 10px;
 	border: 3px solid #ffffff;
-	background-color:rgba(0, 0, 0, 0.4);
+	background-color:rgba(0, 0, 0, 0.2);
 }
 
 .header {
@@ -57,7 +57,7 @@ h1 {
 
 hr {
 	width: 350px;
-	border-color: #00ece4;
+	border-color: #FFCC00;
 }
 
 .form {
@@ -76,7 +76,7 @@ hr {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 300;
 	font-size: 1em;
-	color: #545454;
+	color: black;
 	text-align: center;
 }
 
@@ -120,7 +120,7 @@ color: #545454}
 	font-family: 'Roboto Slab', serif;
 	font-weight: 400;
 	font-size: 1em;
-	color: Black;
+	color: black;
 }
 
 .close {

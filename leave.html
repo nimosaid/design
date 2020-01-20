@@ -17,7 +17,7 @@
 
 </head>
 <body>
-  <style>
+  <!-- <style>
 body {
   font-family: "Lato", sans-serif;
 }
@@ -66,9 +66,9 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-</style>
+</style> -->
 
-<div id="mySidenav" class="sidenav">
+<!-- <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <br>
   <br>
@@ -81,9 +81,9 @@ body {
   <a href="#">History</a>
   <br>
   
-</div>
+</div> -->
 
-<div id="main">
+<!-- <div id="main">
   
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 </div>
@@ -98,7 +98,7 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
-</script>
+</script> -->
 	<div class="main">
     <br>
     <br>
@@ -109,9 +109,9 @@ function closeNav() {
 			<p>Apply for your leave</p>
 		</div>
 		<hr>
+    
     <br>
-    <br>
-		<div class="textinput"  style="text-align:center; color:white;">
+		<div class="textinput"  style="text-align:center; color:black;">
     <form method="post"> 
 			<label for="appointment_for" >Leave Type :</label>
         <select id="appointment_for" name="appointment_for" required class="form">
@@ -122,37 +122,37 @@ function closeNav() {
           <option value="skype">Study Leave</option>
         </select>
         <br>
-        <br>
+       
         
         <label for="date">Start Date:</label>
         <input type="date" name="date" value="" required class="form"></input>
         <br>
-        <br>
+        
         <label for="date">End Date:</label>
         <input type="date" name="date" value="" required class="form"></input>
         <br>
-        <br>
+       
 
         <label for="appointment_description">Comments:</label>
         <textarea id="appointment_description" name="appointment_description" placeholder="" class="form"></textarea>
 
         <br>
-        <br>
+       
 
         <label for="appointment_description">Coverage:</label>
         <textarea id="appointment_description" name="appointment_description" placeholder="" class="form"></textarea>
         
         <br>
-        <br>
+       
 
         <button type="submit" style=" padding: 19px 39px 18px 39px;
   color: #FFF;
-  background-color: blue;
+  background-color: #006699;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
-  border: 1px solid blue;
+  border: 1px solid #006699;
   border-width: 1px 1px 3px;
   ">Request For Appointment</button>
       
@@ -162,6 +162,8 @@ function closeNav() {
 		<hr>
 		
 	</div>
+
+  
 	
 	
 </body>

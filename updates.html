@@ -1,0 +1,193 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - #1208 - Latest news card</title>
+<link rel="stylesheet" href="https://www.littlesnippets.net/css/codepen-result.css">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,800);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip1208 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+}
+figure.snip1208 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+figure.snip1208 img {
+  max-width: 100%;
+  vertical-align: top;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+figure.snip1208 figcaption {
+  padding: 25px;
+  position: relative;
+}
+figure.snip1208 .date,
+figure.snip1208 i {
+  background-color: #6daeb2;
+  top: 25px;
+  color: #fff;
+  left: 25px;
+  min-height: 60px;
+  min-width: 60px;
+  position: absolute;
+  text-align: center;
+}
+figure.snip1208 .date {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+figure.snip1208 .date span {
+  display: block;
+  line-height: 30px;
+}
+figure.snip1208 .date .month {
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+figure.snip1208 i {
+  line-height: 60px;
+  font-size: 30px;
+  -webkit-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip1208 h3,
+figure.snip1208 p {
+  margin: 0;
+  padding: 0;
+}
+figure.snip1208 h3 {
+  margin-bottom: 10px;
+  display: inline-block;
+  font-weight: 600;
+  color: #333333;
+  text-transform: uppercase;
+}
+figure.snip1208 p {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+figure.snip1208 button {
+  border: medium none;
+  padding: 10px 20px;
+  background-color: #6daeb2;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+figure.snip1208 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+figure.snip1208:hover img,
+figure.snip1208.hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+figure.snip1208:hover .date,
+figure.snip1208.hover .date {
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip1208:hover i,
+figure.snip1208.hover i {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.snip1208:hover button,
+figure.snip1208.hover button {
+  background-color:#6daeb2;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no" style="background:white;">
+
+<figure class="snip1208">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample66.jpg" alt="sample66">
+<div class="date"><span class="day">28</span><span class="month">Oct</span></div><i class="ion-film-marker"></i>
+<figcaption>
+<h3>The World Ended Yesterday</h3>
+ <p>
+I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway.
+</p>
+<button>Read More</button>
+</figcaption><a href="#"></a>
+</figure>
+<figure class="snip1208">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample9.jpg" alt="sample9">
+<div class="date"><span class="day">17</span><span class="month">Nov</span></div><i class="ion-headphone"> </i>
+<figcaption>
+<h3>An Abstract Post Heading</h3>
+<p>
+Sometimes the surest sign that intelligent life exists elsewhere in the universe is that none of it has tried to contact us.
+</p>
+<button>Read More</button>
+</figcaption><a href="#"></a>
+</figure>
+<figure class="snip1208">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample6.jpg" alt="sample6">
+<div class="date"><span class="day">01</span><span class="month">Dec</span></div><i class="ion-checkmark"> </i>
+<figcaption>
+<h3>Down with this sort of thing</h3>
+<p>
+I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway.
+</p>
+<button>Read More</button>
+</figcaption><a href="#"></a>
+</figure>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-9bf952ccbbd13c245169a0a1190323a27ce073a3d304b8c0fdf421ab22794a58.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script id="rendered-js">
+/* Demo purposes only */
+$(".hover").mouseleave(
+function () {
+  $(this).removeClass("hover");
+});
+//# sourceURL=pen.js
+    </script>
+
+
+</body></html>

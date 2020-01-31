@@ -1,0 +1,353 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - Employee Bio Hub</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Roboto:300,400,700');
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: auto; 
+}
+
+
+
+h2 {
+  width: 100%;
+  padding: 1em;
+  margin: 0;
+  display: block;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+}
+
+h1, 
+h2 {
+  font-family: 'Roboto', sans-serif;  
+}
+
+.employees-wrapper {
+  max-width: 1170px;
+  margin: auto;
+  border: 1px solid #dbdbdb;
+  display: flex;
+}
+
+.employee-list {
+  width: 230px;
+  padding: 1em;
+}
+
+.employee-list ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.employee-list .name, .name {
+    text-decoration: none;
+    color: #3c9bbf;
+    background-color: rgba(255,255,255,0);
+    font-size: 1.7em;
+    display: block;
+    padding: .5em 0;
+    font-weight: 600;
+    font-variant: all-petite-caps;
+}
+
+.job-title {
+  display: block;
+  color: gray;
+  font-size: .7em;
+  font-weight: 400;
+}
+
+.employee-pics {
+  flex-basis: 400px;
+  padding: .5em;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.employee-pics .name {
+  display: none;
+  font-size: 1.8em;
+}
+
+.employee-pics .pic-frame {
+    width: calc(33% - 1em);
+    filter: saturate(0);
+    height: 260px;
+    display: inline-block;
+    margin: .5em;
+}
+
+
+.employee-pics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+  .employee-list,
+  .employee-pics {
+    padding: 1em;
+  }
+  .employee-pics {
+    justify-content: flex-start;
+  }
+  .employee-pics .pic-frame {
+    width: calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .employees-wrapper {
+    flex-wrap: wrap;
+    max-width: 500px;
+  }
+  h2 {
+    font-size: 1.4em;
+    text-align: center;
+  }
+  .employee-pics .name {
+    display: block;
+    text-align: center;
+    padding: .5em;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  .employee-list,
+  .employee-pics {
+    width: 100%;
+    text-align: center;
+  }
+  .employee-pics {
+    justify-content: center;
+  }
+  .employee-pics .pic-frame {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    margin: 0;
+    padding: 1em 0 0;
+    filter: saturate(1) !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .employee-pics .pic-frame {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .employee-pics .pic-frame {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container">
+<div class="wrapper">
+<h2>Our Staff | <strong>San Diego Location</strong></h2>
+</div>
+
+<div class="employees-wrapper">
+
+<div class="employee-list">
+<ul>
+<li><a href="/employees/ted-hurst/" class="name employee-number-1">Ted Hurst<span class="job-title">Marketing Strategist</span></a></li>
+<li><a href="/employees/sue-mcguire/" class="name employee-number-2" style="padding-left: 0em; background-color: rgba(255, 255, 255, 0);">Sue McGuire<span class="job-title">Lead Designer</span></a></li>
+<li><a href="/employees/evan-latista/" class="name employee-number-3">Evan Latista<span class="job-title">Sales Manager</span></a></li>
+</ul>
+</div>
+
+<div class="employee-pics">
+<div class="pic-frame employee-number-1">
+<a href="/employees/ted-hurst/">
+<img src="https://images.unsplash.com/photo-1529421308418-eab98863cee4?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=f146a8e0de4e567fedddbf83b9232f24" alt="">
+</a>
+<a href="#" class="name">Ted Hurst<span class="job-title">Marketing Strategist</span></a>
+</div>
+<div class="pic-frame employee-number-2" style="filter: saturate(0) contrast(1);">
+<a href="/employees/sue-mcguire/">
+<img src="https://images.unsplash.com/photo-1521296797187-726205347ca9?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=2557c8c60d2c56ce498cb6036f49fb90" alt="">
+</a>
+<a class="name">Sue McGuire<span class="job-title">Lead Designer</span></a>
+</div>
+<div class="pic-frame employee-number-3">
+<a href="/employees/sue-mcguire/">
+<img src="https://images.unsplash.com/photo-1497470288371-3a7b5a82a048?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=3a0516af761be710cebb6dbb259632dc" alt="">
+</a>
+<a class="name">Evan Latista</a>
+</div>
+</div>
+</div>
+
+<br><br><br>
+<div class="wrapper">
+<h2>Our Staff | <strong>Los Angeles Location</strong></h2>
+</div>
+
+<div class="employees-wrapper">
+
+<div class="employee-list">
+<ul>
+<li><a href="/employees/ted-hurst/" class="name employee-number-4">Kevin McDowell<span class="job-title">Marketing Strategist</span></a></li>
+<li><a href="/employees/sue-mcguire/" class="name employee-number-5" style="padding-left: 0em; background-color: rgba(255, 255, 255, 0);">Shirley Hotchkins<span class="job-title">Lead Designer</span></a></li>
+<li><a href="/employees/evan-latista/" class="name employee-number-6">Zach Baur<span class="job-title">Back-End Developer</span></a></li>
+</ul>
+</div>
+
+<div class="employee-pics">
+<div class="pic-frame employee-number-4">
+<a href="/employees/ted-hurst/">
+<img src="https://images.unsplash.com/photo-1526866428207-a2ffb7d82586?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=0c90bc094ddfc46f30de51048ef54465" alt="">
+</a>
+<a href="#" class="name">Kevin McDowell<span class="job-title">Marketing Strategist</span></a>
+</div>
+<div class="pic-frame employee-number-5" style="filter: saturate(0) contrast(1);">
+<a href="/employees/sue-mcguire/">
+<img src="https://images.unsplash.com/photo-1515010915584-5674a0686d0a?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=e81513bba34bec0a08ffc72a864a11a0" alt="">
+</a>
+<a class="name">Shirley Hotchkins<span class="job-title">Lead Designer</span></a>
+</div>
+<div class="pic-frame employee-number-6">
+<a href="/employees/sue-mcguire/">
+<img src="https://images.unsplash.com/photo-1528528956182-52938743340c?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=a060307b9912bbfbf1e9f2f754ecd68c" alt="">
+</a>
+<a class="name">Zach Baur<span class="job-title">Back-End Developer</span></a>
+</div>
+</div>
+</div>
+
+<br><br><br>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-9bf952ccbbd13c245169a0a1190323a27ce073a3d304b8c0fdf421ab22794a58.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script id="rendered-js">
+if ($('.employees-wrapper').length) {
+  $('.employees-wrapper').each(function () {
+    $(function () {
+      var i = 1;
+      $('.employee-list .name').each(function () {
+        $(this).addClass('employee-number-' + i);
+        i++;
+      });
+    });
+
+    $(function () {
+      var i = 1;
+      $('.employee-pics .pic-frame').each(function () {
+        $(this).addClass('employee-number-' + i);
+        i++;
+      });
+    });
+  });
+
+
+
+  $(function () {
+
+    var name = '.employee-list .';
+    var pic = '.employee-pics .';
+
+    $('[class*="employee-number-"]').
+    on("mouseenter", function () {
+      var employeeNumber = $(this).attr("class").split(" ").pop();
+      var employeePic = pic + employeeNumber;
+      var employeeName = name + employeeNumber;
+      var screenWidth = $(window).width();
+
+      if (screenWidth > 750) {
+        TweenMax.to(employeePic, .7, {
+          css: 'filter: saturate(1.2) contrast(1.1);',
+          ease: Circ.easeOut });
+
+        TweenMax.to(employeeName, .4, {
+          paddingLeft: '1em',
+          ease: Circ.easeOut });
+
+        TweenMax.to(employeeName, .2, {
+          backgroundColor: 'rgba(175, 208, 220, 0.26)' });
+
+      }
+    }).
+    on("mouseleave", function () {
+      var employeeNumber = $(this).attr("class").split(" ").pop();
+      var employeePic = pic + employeeNumber;
+      var employeeName = name + employeeNumber;
+      var screenWidth = $(window).width();
+
+      if (screenWidth > 750) {
+        TweenMax.to(employeePic, .7, {
+          css: 'filter: saturate(0) contrast(1);',
+          ease: Circ.easeOut });
+
+        TweenMax.to(employeeName, .2, {
+          paddingLeft: 0,
+          ease: Circ.easeOut });
+
+        TweenMax.to(employeeName, .2, {
+          backgroundColor: 'rgba(255,255,255,0)' });
+
+      }
+    });
+  });
+}
+//# sourceURL=pen.js
+    </script>
+<script src="https://static.codepen.io/assets/editor/iframe/iframeRefreshCSS-8a264da60d1f38eaa58c8243fe0ad6a782e98673c75eb542ccf03bc0efbfe2de.js"></script>
+
+
+</body></html>

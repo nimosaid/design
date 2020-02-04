@@ -1,233 +1,475 @@
-<div class="column">
-    <div class="turn" style="text-align:center;">
-        <br>
-        <br>
-        <html lang="en">
+<!DOCTYPE html>
+<html>
 
-        <head>
-            <meta charset="UTF-8">
-            <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
-            <meta name="apple-mobile-web-app-title" content="CodePen">
-            <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-            <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-            <title>Leave</title>
-            <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-            <style>
-                body {
-                    font-family: 'lato', sans-serif;
-                }
-                
-                .container {
-                    max-width: 1000px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-                
-                h2 {
-                    font-size: 26px;
-                    margin: 20px 0;
-                    text-align: center;
-                }
-                
-                h2 small {
-                    font-size: 0.5em;
-                }
-                
-                .responsive-table li {
-                    border-radius: 3px;
-                    padding: 27px 30px;
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 25px;
-                }
-                
-                .responsive-table .table-header {
-                    background-color: #95A5A6;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    letter-spacing: 0.03em;
-                }
-                
-                .responsive-table .table-row {
-                    background-color: #ffffff;
-                    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
-                }
-                
-                .responsive-table .col-1 {
-                    flex-basis: 10%;
-                }
-                
-                .responsive-table .col-2 {
-                    flex-basis: 40%;
-                }
-                
-                .responsive-table .col-3 {
-                    flex-basis: 25%;
-                }
-                
-                .responsive-table .col-4 {
-                    flex-basis: 25%;
-                }
-                
-                @media all and (max-width: 767px) {
-                    .responsive-table .table-header {
-                        display: none;
-                    }
-                    .responsive-table li {
-                        display: block;
-                    }
-                    .responsive-table .col {
-                        flex-basis: 100%;
-                    }
-                    .responsive-table .col {
-                        display: flex;
-                        padding: 10px 0;
-                    }
-                    .responsive-table .col:before {
-                        color: #6C7A89;
-                        padding-right: 10px;
-                        content: attr(data-label);
-                        flex-basis: 50%;
-                        text-align: right;
-                    }
-                }
-            </style>
-            <script>
-                window.console = window.console || function(t) {};
-            </script>
-            <script>
-                if (document.location.search.match(/type=embed/gi)) {
-                    window.parent.postMessage("resize", "*");
-                }
-            </script>
-        </head>
-
-        <body translate="no">
-            <br>
-            <br>
-            <div class="container">
-                <ul class="responsive-table">
-                    <li class="table-header" style="background:#6daeb2;">
-                        <div class="col col-1">Job Id</div>
-                        <div class="col col-2">Customer Name</div>
-                        <div class="col col-3">Amount Due</div>
-                        <div class="col col-4">Payment Status</div>
-                    </li>
-                    <li class="table-row" style="color:black;background:white;">
-                        <div class="col col-1" data-label="Job Id">42235</div>
-                        <div class="col col-2" data-label="Customer Name">John Doe</div>
-                        <div class="col col-3" data-label="Amount">$350</div>
-                        <div class="col col-4" data-label="Payment Status">Pending</div>
-                    </li>
-                    <li class="table-row" style="color:black;background:white;">
-                        <div class="col col-1" data-label="Job Id">42442</div>
-                        <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
-                        <div class="col col-3" data-label="Amount">$220</div>
-                        <div class="col col-4" data-label="Payment Status">Pending</div>
-                    </li>
-                    <li class="table-row" style="color:black;background:white;">
-                        <div class="col col-1" data-label="Job Id">42257</div>
-                        <div class="col col-2" data-label="Customer Name">John Smith</div>
-                        <div class="col col-3" data-label="Amount">$341</div>
-                        <div class="col col-4" data-label="Payment Status">Pending</div>
-                    </li>
-                    <li class="table-row" style="color:black;background:white;">
-                        <div class="col col-1" data-label="Job Id">42311</div>
-                        <div class="col col-2" data-label="Customer Name">John Carpenter</div>
-                        <div class="col col-3" data-label="Amount">$115</div>
-                        <div class="col col-4" data-label="Payment Status">Pending</div>
-                    </li>
-                </ul>
-            </div>
-
-
-        </body>
-
-        </html>
-    </div>
-</div>
-<br>
-<br>
-
-<div class="column">
-    <br>
-    <br>
-    <div class="main" style="text-align:center;">
-        <h3>Card 3</h3>
-        <p>Some text</p>
-        <p>Some text</p>
-    </div>
-</div>
-
-<div class="column">
-    <br>
-    <br>
-    <div class="main" style="text-align:center;">
-        <h3>Card 3</h3>
-        <p>Some text</p>
-        <p>Some text</p>
-    </div>
-</div>
-
-
-
-</div>
-
-<html lang="en"><head>
-<meta charset="UTF-8">
-<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
-<meta name="apple-mobile-web-app-title" content="CodePen">
-<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-<title>CodePen - ICON Bar Vertically</title>
-<style>
-.icon_bar{
-  width: 90px;
-  background-color: #555;
-}
-.icon_bar a{
-  display: block;
-  text-align: center;
-  color: white;
-  padding: 14px;
-  font-size: 30px;
-  transition: 0.5s ease;
-}
-
-.icon_bar a:hover{
-  color: #000;
-}
-.active{
-  background: #101010;
-}
-</style>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Float four columns side by side */
+        
+        .column {
+            float: left;
+            width: 47%;
+            padding: 0 10px;
+        }
+        /* Remove extra left and right margins, due to padding */
+        
+        .row {
+            margin: 0 -5px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive columns */
+        
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+        /* Style the cards */
+        
+        html {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: url("https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        h1 {
+            font-family: 'Fira Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.7em;
+            color: black;
+        }
+        
+        .intro>p {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 300;
+            font-size: 1em;
+            color: black;
+        }
+        
+        .main {
+            width: 450px;
+            height: 100%;
+            padding-bottom: 25px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            border: 3px solid #ffffff;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            width: 100%;
+            height: 70px;
+            text-align: center;
+        }
+        
+        .logo {
+            margin-top: 20px;
+        }
+        
+        .intro {
+            text-align: center;
+        }
+        
+        hr {
+            width: 350px;
+            border-color: #FFCC00;
+        }
+        
+        .form {
+            width: 400px;
+            height: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            background-color: #FFFFFF;
+            display: inline-block;
+            opacity: 0.7;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 300;
+            font-size: 1em;
+            color: black;
+            text-align: center;
+        }
+        
+        .example {
+            color: #545454
+        }
+        
+        .list,
+        .textinput {
+            text-align: center;
+        }
+        
+        .result {
+            width: 400px;
+            height: 50px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            background-color: #A4E2E0;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .result-remove {
+            width: 400px;
+            height: 50px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            background-color: #E2A4A4;
+            text-align: center;
+            text-decoration: line-through;
+            display: inline-block;
+        }
+        
+        .result,
+        .result-remove>p {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 400;
+            font-size: 1em;
+            color: black;
+        }
+        
+        .close {
+            float: right;
+            position: relative;
+            bottom: 43px;
+            margin-right: 9px;
+            cursor: pointer;
+        }
+        
+        .check {
+            float: left;
+            position: relative;
+            top: 10px;
+            margin-left: 9px;
+            margin-right: -36px;
+            cursor: pointer;
+        }
+        
+        .add {
+            float: left;
+            position: relative;
+            top: 10px;
+            margin-left: 9px;
+            margin-right: -36px;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .button {
+            background: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .button:hover {
+            background-color: #3e8e41
+        }
+        
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        
+        .turn {
+            width: 450px;
+            height: 100%;
+            padding-bottom: 25px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            border: 3px solid #ffffff;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body translate="no">
+
+<body>
+<br>
+<br>
+    <div class="header">
+        <img class="fixed-logo" src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-color-195.png" width="180px" alt="Sanergy">
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="main" style="text-align:center;">
+                <br>
+                <br>
+                <br>
+                <div class="header">
+                    <h1 style="font-weight:bold;font-size:25px;">Request For Leave</h1>
+                </div>
+                <form method="post">
+                    <label for="appointment_for">Leave Type :</label>
+                    <select id="appointment_for" name="appointment_for" required class="form">
+          <option value="coffee">Maternity Leave</option>
+          <option value="meeting">Parternity Leave</option>
+          <option value="Business">Annual Leave</option>
+          <option value="lunch">Sick Leave</option>
+          <option value="skype">Study Leave</option>
+        </select>
+                    <br>
+
+
+                    <label for="date">Start Date:</label>
+                    <input type="date" name="date" value="" required class="form"></input>
+                    <br>
+
+                    <label for="date">End Date:</label>
+                    <input type="date" name="date" value="" required class="form"></input>
+                    <br>
+
+
+                    <label for="appointment_description">Comments:</label>
+                    <textarea id="appointment_description" name="appointment_description" placeholder="" class="form"></textarea>
+
+                    <br>
+
+
+                    <label for="appointment_description">Coverage:</label>
+                    <textarea id="appointment_description" name="appointment_description" placeholder="" class="form"></textarea>
+
+                    <br>
+
+
+                    <button type="submit" style=" padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #6daeb2;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 15px;
+  border: 1px solid #6daeb2;
+  border-width: 1px 1px 3px;
+  ">Submit Request</button>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="turn" style="text-align:center;">
+                <br>
+                <br>
+                <html lang="en">
+
+                <head>
+                    <meta charset="UTF-8">
+                    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+                    <meta name="apple-mobile-web-app-title" content="CodePen">
+                    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+                    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+                    <title>Leave</title>
+                    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+                    <style>
+                        body {
+                            font-family: 'lato', sans-serif;
+                        }
+                        
+                        .container {
+                            max-width: 1000px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                        
+                        h2 {
+                            font-size: 26px;
+                            margin: 20px 0;
+                            text-align: center;
+                        }
+                        
+                        h2 small {
+                            font-size: 0.5em;
+                        }
+                        
+                        .responsive-table li {
+                            border-radius: 3px;
+                            padding: 27px 30px;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 25px;
+                        }
+                        
+                        .responsive-table .table-header {
+                            background-color: #95A5A6;
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.03em;
+                        }
+                        
+                        .responsive-table .table-row {
+                            background-color: #ffffff;
+                            box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+                        }
+                        
+                        .responsive-table .col-1 {
+                            flex-basis: 10%;
+                        }
+                        
+                        .responsive-table .col-2 {
+                            flex-basis: 40%;
+                        }
+                        
+                        .responsive-table .col-3 {
+                            flex-basis: 25%;
+                        }
+                        
+                        .responsive-table .col-4 {
+                            flex-basis: 25%;
+                        }
+                        
+                        @media all and (max-width: 767px) {
+                            .responsive-table .table-header {
+                                display: none;
+                            }
+                            .responsive-table li {
+                                display: block;
+                            }
+                            .responsive-table .col {
+                                flex-basis: 100%;
+                            }
+                            .responsive-table .col {
+                                display: flex;
+                                padding: 10px 0;
+                            }
+                            .responsive-table .col:before {
+                                color: #6C7A89;
+                                padding-right: 10px;
+                                content: attr(data-label);
+                                flex-basis: 50%;
+                                text-align: right;
+                            }
+                        }
+                    </style>
+                    <script>
+                        window.console = window.console || function(t) {};
+                    </script>
+                    <script>
+                        if (document.location.search.match(/type=embed/gi)) {
+                            window.parent.postMessage("resize", "*");
+                        }
+                    </script>
+                </head>
+
+                <body translate="no">
+                    <br>
+                    <br>
+                    <div class="container">
+                        <ul class="responsive-table">
+                            <li class="table-header" style="background:#6daeb2;">
+                                <div class="col col-1">Job Id</div>
+                                <div class="col col-2">Customer Name</div>
+                                <div class="col col-3">Amount Due</div>
+                                <div class="col col-4">Payment Status</div>
+                            </li>
+                            <li class="table-row" style="color:black;background:rgba(0, 0, 0, 0.1;">
+                                <div class="col col-1" data-label="Job Id">42235</div>
+                                <div class="col col-2" data-label="Customer Name">John Doe</div>
+                                <div class="col col-3" data-label="Amount">$350</div>
+                                <div class="col col-4" data-label="Payment Status">Pending</div>
+                            </li>
+                            <li class="table-row" style="color:black;background:rgba(0, 0, 0, 0.1;">
+                                <div class="col col-1" data-label="Job Id">42442</div>
+                                <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+                                <div class="col col-3" data-label="Amount">$220</div>
+                                <div class="col col-4" data-label="Payment Status">Pending</div>
+                            </li>
+                            <li class="table-row" style="color:black;background:rgba(0, 0, 0, 0.1;">
+                                <div class="col col-1" data-label="Job Id">42257</div>
+                                <div class="col col-2" data-label="Customer Name">John Smith</div>
+                                <div class="col col-3" data-label="Amount">$341</div>
+                                <div class="col col-4" data-label="Payment Status">Pending</div>
+                            </li>
+                            <li class="table-row" style="color:black;background:white;">
+                                <div class="col col-1" data-label="Job Id">42311</div>
+                                <div class="col col-2" data-label="Customer Name">John Carpenter</div>
+                                <div class="col col-3" data-label="Amount">$115</div>
+                                <div class="col col-4" data-label="Payment Status">Pending</div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </body>
+
+                </html>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="column">
+            <br>
+            <br>
+            <div class="main" style="text-align:center;">
+                <h3>Card 3</h3>
+                <p>Some text</p>
+                <p>Some text</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <br>
+            <br>
+            <div class="main" style="text-align:center;">
+                <h3>Card 3</h3>
+                <p>Some text</p>
+                <p>Some text</p>
+            </div>
+        </div>
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </div>
 
 
-<div class="icon_bar">
-<a href="#" class="active"> <i class="fa fa-home"></i> </a>
-<a href="#"> <i class="fa fa-search"></i> </a>
-<a href="#"> <i class="fa fa-envelope"></i> </a>
-<a href="#"> <i class="fa fa-globe"></i> </a>
-<a href="#"><i class="fa fa-trash"></i> </a>
-</div>
+</body>
 
-
-
-</body></html>
+</html>

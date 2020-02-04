@@ -63,8 +63,8 @@ body {
   overflow: hidden;
   border-radius: 50%;
   margin: auto;
-  background: grey;
-  border: 0.375rem solid grey;
+  background: #6daeb2;
+  border: 0.375rem solid #6daeb2;;
 }
 
 .profile-card_header img {
@@ -102,7 +102,7 @@ body {
 
 .profile-card_about {
   line-height: 1.5;
-  background: #696969;
+  background: #6daeb2;;
   padding: 1.5em 2rem;
   color: white;
   font-family: 'Lato', sans-serif;

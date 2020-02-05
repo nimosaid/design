@@ -4,9 +4,358 @@
 <meta name="apple-mobile-web-app-title" content="CodePen">
 <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
 <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-<title>CodePen - Google sign in</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<title>CodePen - Login/Registration Form Transition</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background: #ededed;
+}
+
+input, button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.tip {
+  font-size: 20px;
+  margin: 40px auto 50px;
+  text-align: center;
+}
+
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 550px;
+  margin: 0 auto 100px;
+  background: #fff;
+}
+
+.form {
+  position: relative;
+  width: 640px;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+  padding: 50px 30px 0;
+}
+
+.sub-cont {
+  overflow: hidden;
+  position: absolute;
+  left: 640px;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  padding-left: 260px;
+  background: #fff;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+.cont.s--signup .sub-cont {
+  -webkit-transform: translate3d(-640px, 0, 0);
+          transform: translate3d(-640px, 0, 0);
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.img {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  padding-top: 360px;
+}
+.img:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/sections-3.jpg");
+  background-size: cover;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+.img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.cont.s--signup .img:before {
+  -webkit-transform: translate3d(640px, 0, 0);
+          transform: translate3d(640px, 0, 0);
+}
+.img__text {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+.img__text h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.img__text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cont.s--signup .img__text.m--up {
+  -webkit-transform: translateX(520px);
+          transform: translateX(520px);
+}
+.img__text.m--in {
+  -webkit-transform: translateX(-520px);
+          transform: translateX(-520px);
+}
+.cont.s--signup .img__text.m--in {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.img__btn {
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 100px;
+  height: 36px;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+.img__btn:after {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+.img__btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1.2s;
+  transition: -webkit-transform 1.2s;
+  transition: transform 1.2s;
+  transition: transform 1.2s, -webkit-transform 1.2s;
+}
+.img__btn span.m--in {
+  -webkit-transform: translateY(-72px);
+          transform: translateY(-72px);
+}
+.cont.s--signup .img__btn span.m--in {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.cont.s--signup .img__btn span.m--up {
+  -webkit-transform: translateY(72px);
+          transform: translateY(72px);
+}
+
+h2 {
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+label span {
+  font-size: 12px;
+  color: #cfcfcf;
+  text-transform: uppercase;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.forgot-pass {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #cfcfcf;
+}
+
+.submit {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: #d4af7a;
+  text-transform: uppercase;
+}
+
+.fb-btn {
+  border: 2px solid #d3dae9;
+  color: #8fa1c7;
+}
+.fb-btn span {
+  font-weight: bold;
+  color: #455a81;
+}
+
+.sign-in {
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+.cont.s--signup .sign-in {
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transform: translate3d(640px, 0, 0);
+          transform: translate3d(640px, 0, 0);
+}
+
+.sign-up {
+  -webkit-transform: translate3d(-900px, 0, 0);
+          transform: translate3d(-900px, 0, 0);
+}
+.cont.s--signup .sign-up {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.icon-link {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 32px;
+}
+.icon-link img {
+  width: 100%;
+  vertical-align: top;
+}
+.icon-link--twitter {
+  left: auto;
+  right: 5px;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<br>
+<br>
+<br>
+
+<div class="cont">
+<div class="form sign-in">
+<h2>Welcome back,</h2>
+<label>
+<span>Email</span>
+<input type="email">
+</label>
+<label>
+<span>Password</span>
+<input type="password">
+</label>
+<p class="forgot-pass">Forgot password?</p>
+<button type="button" class="submit">Sign In</button>
+<button type="button" class="fb-btn">Connect with <span>facebook</span></button>
+</div>
+<div class="sub-cont">
+<div class="img">
+<div class="img__text m--up">
+<h2>New here?</h2>
+<p>Sign in with a unique password to access the intranet.</p>
+</div>
+<div class="img__text m--in">
+<h2>One of us?</h2>
+<p>If you already has an account, just sign in with your work email. We've missed you!</p>
+</div>
+<div class="img__btn">
+<span class="m--up">Sign Up</span>
+<span class="m--in">Sign In</span>
+</div>
+</div>
+<div class="wrapper" style="text-align:center;">
+<br>
+<br>
+
+<img class="fixed-logo" src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-color-195.png" width="160px" alt="Sanergy">
+<br>
+<br>
+<h4>Sign in with your Google Account</h4>
+<div class="signIn">
+<img src="img/icons8-google-96.png">
+<span class="bar"></span>
+<a href="https://mail.google.com/mail/"><input class="button" type="submit" value="Login"></a>
+
+</div>
+<div class="diffAccount">
+<a href="#" class="diffAccount">Sign in with a diffrent account</a>
+</div>
+</div>
 <style>
 *{
   margin: 0;
@@ -127,187 +476,19 @@ a:hover{
   margin: 0 auto;
 }
 </style>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-</head>
-<body translate="no">
-<div class="wrapper">
-<img class="headerImg" src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png">
-<h1>One Account. All of Google.</h1>
-<h4>Sign in with your Google Account</h4>
-<div class="signIn">
-<img src="http://image.flaticon.com/icons/png/128/61/61173.png">
-<input class="email" type="text" placeholder="Enter Your Email">
-<span class="bar"></span>
-<a href="https://mail.google.com/mail/"><input class="button" type="submit" value="Next"></a>
-<a href="#">Need Help?</a>
-</div>
-<div class="diffAccount">
-<a href="#" class="diffAccount">Sign in with a diffrent account</a>
 </div>
 </div>
-
-
-</body></html><html lang="en"><head>
-<meta charset="UTF-8">
-<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
-<meta name="apple-mobile-web-app-title" content="CodePen">
-<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-<title>CodePen - Google sign in</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<style>
-*{
-  margin: 0;
-  padding: 0;
-  border: none;
-  list-style: none;
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  font-family: 'Open Sans', sans-serif;
-  box-sizing: border-box;
-}
-body{
-  background-color: #fff;
-}
-.wrapper{
-  width: 90%;
-  margin: 0 auto;
-  max-width: 800px;
-}
-.headerImg{
-  width: 116px;
-  text-align: center;
-  margin: 20px calc(50% - 58px) 5px; 
-}
-h1, h4{
-  font-weight: 200;
-  margin: 10px 0;
-  color: rgba(0,0,0,0.65);
-  text-align: center;
-}
-.signIn{
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  width: 354px;
-  background-color: rgba(0, 0, 0, 0.06);
-  margin: 30px auto;
-  padding: 40px;
-}
-.signIn img{
-  width: 96px;
-  border-radius: 100%;
-  padding: 5px;
-  margin: 0 calc(50% - 48px) 20px;
-  background-color: rgba(0,0,0,0.07);
-}
-.email{
-  box-shadow: inset 0 -1px 3px rgba(0,0,0,0.12),inset 0 1px 2px rgba(0,0,0,0.24);
-  padding: 10px;
-  background-color: #FFF;
-  font-size: 1.1em;
-  font-weight: 300;
-  width: 100%;
-  height: 44px;
-}
-.email:hover{
-    box-shadow: inset 0 -2px 2px rgba(0,0,0,0.16), inset 0 2px 2px rgba(0,0,0,0.23);
-}
-.email:focus {
-    outline: none;
-    background-color: #fefefe;
-    box-shadow: inset 0 -2px 2px rgba(0,0,0,0.16), inset 0 2px 2px rgba(0,0,0,0.23);
-
-}
-.bar {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-.bar:after {
-  content: '';
-  height: 2px;
-  width: 0;
-  position: absolute;
-  background-color: #2196F3; 
-  background: linear-gradient(to right, #4885ed 25%, #db3236 25%, #db3236 50%, #f4c20d 50%,#f4c20d 75%, #3cba54 75%,#3cba54 100%);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-.bar:after {
-  left: 0%; 
-}
-.email:focus ~ .bar:after {
-  width: 100%;
-}
-
-.button{
-  text-align: center;
-  width: 100%;
-  margin: 20px 0 6px 0;
-  background-color: rgba(33, 150, 243, 0.95);
-  color: rgba(255,255,255,0.85);
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  cursor: pointer;
-  height: 36px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-
-}
-.button:focus{
-   outline: none;
-}
-.button:hover{
-  background-color: rgba(33, 150, 243, 1);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-
-}
-a{
-    color: rgba(33, 150, 243, 1);
-    text-decoration: none;
-    font-size: 14px;
-}
-a:hover{
-  text-decoration: underline;
-}
-.diffAccount{
-  text-align: left;
-  width: 354px;
-  margin: 0 auto;
-}
-</style>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-</head>
-<body translate="no">
-<div class="wrapper">
-<img class="headerImg" src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png">
-<h1>One Account. All of Google.</h1>
-<h4>Sign in with your Google Account</h4>
-<div class="signIn">
-<img src="http://image.flaticon.com/icons/png/128/61/61173.png">
-<input class="email" type="text" placeholder="Enter Your Email">
-<span class="bar"></span>
-<a href="https://mail.google.com/mail/"><input class="button" type="submit" value="Next"></a>
-<a href="#">Need Help?</a>
-</div>
-<div class="diffAccount">
-<a href="#" class="diffAccount">Sign in with a diffrent account</a>
-</div>
-</div>
+<a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
+</a>
+<a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
+</a>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-db44b196776521ea816683afab021f757616c80860d31da6232dedb8d7cc4862.js"></script>
+<script id="rendered-js">
+document.querySelector('.img__btn').addEventListener('click', function () {
+  document.querySelector('.cont').classList.toggle('s--signup');
+});
+//# sourceURL=pen.js
+    </script>
 
 
 </body></html>

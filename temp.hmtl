@@ -1,3 +1,7 @@
+
+
+
+
 <html lang="en">
 
 <head>
@@ -682,37 +686,51 @@
         <div class="container">
             <div class="grid">
                 <div class="column-xs-12" style="border: 2px solid #f2eaeb;">
+<form style="text-align:center;background;">
 <br>
 <br>
-<style>
-{
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-color: #333;
-font: 300 15px/15px Roboto,Arial,Helvetica;
--webkit-font-smoothing: antialiased;
-box-sizing: border-box;
-margin-right: -15px;
-margin-left: -15px;
-animation-duration: 1s;
-animation-fill-mode: both;
-visibility: visible;
-animation-name: fadeInLeftBig;
-}
-</style>
   <h4 style="font-size:25px;font-weight:bold;">Request for Leave</h4>
   <br>
-  		<div class="row wowload fadeInLeftBig animated" style="visibility: visible; animation-name: fadeInLeftBig;">
-      <form action="webformmailer.php" method="post" id="contactForm">
-      <div class="col-sm-6 col-sm-offset-3 col-xs-12">
-        <input type="text" name="name" placeholder="Name">
-          <input type="email" name="email" placeholder="Email">
-           <input type="mobile" name="mobile" placeholder="Mobile">
-        <input type="text" name="company" placeholder="Company">
-        <textarea rows="5" name="message" placeholder="Message"></textarea>
-        <button class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
-      </div>
-      </form>
-  </div>
+  		<label for="appointment_for" >Leave Type :</label>
+        <select id="appointment_for" name="appointment_for" required class="form">
+          <option value="coffee">Maternity Leave</option>
+          <option value="meeting">Parternity Leave</option>
+          <option value="Business">Annual Leave</option>
+          <option value="lunch">Sick Leave</option>
+          <option value="skype">Study Leave</option>
+        </select>
+   <br>
+   <table> 
+   <tr>
+   <td style="margin-left:20px;padding-left: 50px;">
+        <label for="date" >Start Date:</label>
+        <input type="date" name="date" value="" required class="form"></input></td>
+
+    <td>
+        <label for="date" style="margin-left:20px;padding-left: 50px;"> End Date:</label>
+        <input type="date" name="date" value="" required class="form"></input></td>
+   </tr>
+   </table>
+       
+        
+    
+    <table> 
+    <tr>
+     <td style="margin-left:30px;padding-left: 50px;">
+        <label for="appointment_description" >Comments:</label>
+        <textarea id="appointment_description" name="appointment_description" placeholder="" class="form"></textarea></td>
+     <td style="margin-left:0px;padding-left: 50px;">
+        <label for="appointment_description">Coverage:</label>
+        <textarea id="appointment_description" name="appointment_description" placeholder="" class="form"></textarea></td>
+    </tr>
+    </table>     
+        <br>
+        <br>
+  <br>
+  <input class="sub" type="submit" value="Submit Request" style="background:orange;">
+  <br>
+  <br>
+</form>
            <style>@import "compass/css3";
 
 $bgimage: "https://unsplash.s3.amazonaws.com/batch%205/night-city.jpg";

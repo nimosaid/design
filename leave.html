@@ -661,13 +661,16 @@
             <br>
             <div class="grid">
                 <div class="column-xs-12 column-md-10">
-                    <a href="homepage.html"><p  id="highlight" style="font-size:25px;font-weight:bold;">SANERGY</p></a>
-                    
+                    <a href="homepage.html">
+                        <p id="highlight" style="font-size:25px;font-weight:bold;">SANERGY</p>
+                    </a>
+
                 </div>
                 <div class="column-xs-12 column-md-2">
                     <ul>
-                        <li><a href="#" class="active">Form</a></li>
-                        <li><a href="#">History</a></li>
+                        <li><a href="#opening" class="active">Form</a></li>
+                        <li><a href="#history" class="active">History</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -682,127 +685,158 @@
         <div class="container">
             <div class="grid">
                 <div class="column-xs-12" style="border: 2px solid #f2eaeb;">
-<br>
-<br>
-<style>
-{
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-color: #333;
-font: 300 15px/15px Roboto,Arial,Helvetica;
--webkit-font-smoothing: antialiased;
-box-sizing: border-box;
-margin-right: -15px;
-margin-left: -15px;
-animation-duration: 1s;
-animation-fill-mode: both;
-visibility: visible;
-animation-name: fadeInLeftBig;
-}
-</style>
-  <h4 style="font-size:25px;font-weight:bold;">Request for Leave</h4>
-  <br>
-  		<div class="row wowload fadeInLeftBig animated" style="visibility: visible; animation-name: fadeInLeftBig;">
-      <form action="webformmailer.php" method="post" id="contactForm">
-      <div class="col-sm-6 col-sm-offset-3 col-xs-12">
-        <input type="text" name="name" placeholder="Name">
-          <input type="email" name="email" placeholder="Email">
-           <input type="mobile" name="mobile" placeholder="Mobile">
-        <input type="text" name="company" placeholder="Company">
-        <textarea rows="5" name="message" placeholder="Message"></textarea>
-        <button class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
-      </div>
-      </form>
-  </div>
-           <style>@import "compass/css3";
+                    <br>
+                    <br>
+                    <style>
+                        {
+                            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                            color: #333;
+                            font: 300 15px/15px Roboto, Arial, Helvetica;
+                            -webkit-font-smoothing: antialiased;
+                            box-sizing: border-box;
+                            margin-right: -15px;
+                            margin-left: -15px;
+                            animation-duration: 1s;
+                            animation-fill-mode: both;
+                            visibility: visible;
+                            animation-name: fadeInLeftBig;
+                        }
+                    </style>
+                    <h4 style="font-size:25px;font-weight:bold;text-align: center;text-decoration: underline; " id="opening">Request for Leave</h4>
 
-$bgimage: "https://unsplash.s3.amazonaws.com/batch%205/night-city.jpg";
+                    <form>
+                        <ul class="form-style-1">
+                            <li>
+                                <label>Leave Type</label>
+                                <select name="field4" class="field-select">
+                                        <option value="Annual">Annual</option>
+                                        <option value="Sick">Sick</option>
+                                        <option value="Exam">Exam</option>
+                                        <option value="Maternity">Maternity</option>
+                                        <option value="Parternity">Parternity</option>
+                                        </select>
+                            </li>
+                            <li><label>Date <span class="required"></span></label><input type="date" name="End date" value="" required class="form"></input> <input type="date" name=" date" value="" required class="form"></input>
+                            </li>
+                            <li>
+                                <label> Coverage <span class="required"></span></label>
+                                <input type="email" name="field3" class="field-long" />
+                            </li>
 
-body {
-  background: url($bgimage) no-repeat center center;
-  background-size: cover;
-
-}
-
-.form {
-    width: 300px;
-    height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    background-color: #FFFFFF;
-    display: inline-block;
-    opacity: 0.7;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 300;
-    font-size: 1em;
-    color: black;
-    text-align: center;
-}
-
-  
-  a {
-   font-family:  $heavy;
-   color:  #242b31;
-   text-decoration:  none;
-   opacity:  0.45;
-  }
-  
-  h1 {
-   position:  absolute;
-    top:  0;
-    left:  0;
-    right:  0;
-    
-   background:  #242b31;
-   color:  #596774;
-   padding:  1.5rem;
-   text-transform:  uppercase;
-   font-size:  3rem;
-   border-top:  0.25rem solid #37bde0;
-
-    
-  }
-}
-
-input {
- width:  100%;
- display:  block;
- clear:  both;
- text-align:  center;
- padding:  0.75rem;
- border-color:  $medgray;
- margin-bottom:  1.5rem;
- font-family:  $heavy;
-}
-
-
-input[type="submit"] {
- background: #37bde0; 
- border:  none;
- color:  $dark;
- padding:  1.25rem;
-  font-family:  $heavy;
-  text-transform:  uppercase;
-  cursor:  pointer;
-  transition:  0.2s all ease-in-out;
-  &:hover {
-     
-     color:  $white;
-    }
-}
-
-</style>        
+                            <li>
+                                <label>Comments <span class="required"></span></label>
+                                <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                            </li>
+                            <li>
+                                <input type="submit" value="Submit" />
+                            </li>
+                        </ul>
+                    </form>
+                    <style type="text/css">
+                        .form-style-1 {
+                            margin: 10px auto;
+                            max-width: 400px;
+                            padding: 20px 12px 10px 20px;
+                            font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                        }
+                        
+                        .form-style-1 li {
+                            padding: 0;
+                            display: block;
+                            list-style: none;
+                            margin: 10px 0 0 0;
+                        }
+                        
+                        .form-style-1 label {
+                            margin: 0 0 3px 0;
+                            padding: 0px;
+                            display: block;
+                            font-weight: bold;
+                        }
+                        
+                        .form-style-1 input[type=text],
+                        .form-style-1 input[type=date],
+                        .form-style-1 input[type=datetime],
+                        .form-style-1 input[type=number],
+                        .form-style-1 input[type=search],
+                        .form-style-1 input[type=time],
+                        .form-style-1 input[type=url],
+                        .form-style-1 input[type=email],
+                        textarea,
+                        select {
+                            box-sizing: border-box;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            border: 1px solid #BEBEBE;
+                            padding: 7px;
+                            margin: 0px;
+                            -webkit-transition: all 0.30s ease-in-out;
+                            -moz-transition: all 0.30s ease-in-out;
+                            -ms-transition: all 0.30s ease-in-out;
+                            -o-transition: all 0.30s ease-in-out;
+                            outline: none;
+                        }
+                        
+                        .form-style-1 input[type=text]:focus,
+                        .form-style-1 input[type=date]:focus,
+                        .form-style-1 input[type=datetime]:focus,
+                        .form-style-1 input[type=number]:focus,
+                        .form-style-1 input[type=search]:focus,
+                        .form-style-1 input[type=time]:focus,
+                        .form-style-1 input[type=url]:focus,
+                        .form-style-1 input[type=email]:focus,
+                        .form-style-1 textarea:focus,
+                        .form-style-1 select:focus {
+                            -moz-box-shadow: 0 0 8px #88D5E9;
+                            -webkit-box-shadow: 0 0 8px #88D5E9;
+                            box-shadow: 0 0 8px #88D5E9;
+                            border: 1px solid #88D5E9;
+                        }
+                        
+                        .form-style-1 .field-divided {
+                            width: 49%;
+                        }
+                        
+                        .form-style-1 .field-long {
+                            width: 100%;
+                        }
+                        
+                        .form-style-1 .field-select {
+                            width: 100%;
+                        }
+                        
+                        .form-style-1 .field-textarea {
+                            height: 100px;
+                        }
+                        
+                        .form-style-1 input[type=submit],
+                        .form-style-1 input[type=button] {
+                            background: #4B99AD;
+                            padding: 8px 15px 8px 15px;
+                            border: none;
+                            color: #fff;
+                        }
+                        
+                        .form-style-1 input[type=submit]:hover,
+                        .form-style-1 input[type=button]:hover {
+                            background: #4691A4;
+                            box-shadow: none;
+                            -moz-box-shadow: none;
+                            -webkit-box-shadow: none;
+                        }
+                        
+                        .form-style-1 .required {
+                            color: red;
+                        }
+                    </style>
+                    <br>
                 </div>
 
-                <div class="column-xs-12 column-md-4" style="border: 2px solid #f2eaeb;">
-                <br>
+                <div class="column-xs-12 column-md-6" style="border: 2px solid #f2eaeb;">
+                    <br>
 
 
-                   <html lang="en">
+                    <html lang="en">
 
                     <head>
                         <meta charset="UTF-8">
@@ -810,7 +844,7 @@ input[type="submit"] {
                         <meta name="apple-mobile-web-app-title" content="CodePen">
                         <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
                         <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-                        
+
                         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
                         <style>
@@ -853,7 +887,6 @@ input[type="submit"] {
                             
                             .responsive-table .table-row {
                                 background-color: #ffffff;
-                                
                             }
                             
                             .responsive-table .col-1 {
@@ -907,45 +940,39 @@ input[type="submit"] {
 
                     <body translate="no">
                         <div class="container">
-                        <h4 style="font-size:25px;font-weight:bold;text-align:center;text-decoration: underline;">Leave Balances</h4>
+                            <h4 style="font-size:25px;font-weight:bold;text-align:center;text-decoration: underline;">Leave Balances</h4>
 
                             <ul class="responsive-table" style="padding-left:20px;padding-right:20px;">
-                                <!-- <li class="table-header" style="background:none;">
-                                
-                                   
-                                    <div  style="font-weight:bold;">Leave Type</div>
-                                    <div style="font-weight:bold;">Balance</div>
-                                   
-                                </li> -->
-                               
+
+
                                 <li class="table-row" style="background:none;">
-                                   
-                                    <div class="col col-2" data-label="Customer Name">John Doe</div>
-                                    <div class="col col-3" data-label="Amount">$350</div>
-                                    
+
+                                    <div class="col col-2" data-label="Customer Name">Annual</div>
+                                    <div class="col col-3" data-label="Amount">12 days</div>
+
                                 </li>
                                 <hr>
                                 <li class="table-row" style="background:none;">
-                                  
-                                    <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
-                                    <div class="col col-3" data-label="Amount">$220</div>
-                                   
+
+                                    <div class="col col-2" data-label="Customer Name">Sick</div>
+                                    <div class="col col-3" data-label="Amount">15 days</div>
+
                                 </li>
                                 <hr>
                                 <li class="table-row" style="background:none;">
-                                    
-                                    <div class="col col-2" data-label="Customer Name">John Smith</div>
-                                    <div class="col col-3" data-label="Amount">$341</div>
-                                    
+
+                                    <div class="col col-2" data-label="Customer Name">Exam</div>
+                                    <div class="col col-3" data-label="Amount">4 days </div>
+
                                 </li>
                                 <hr>
                                 <li class="table-row" style="background:none;">
-                               
-                                    <div class="col col-2" data-label="Customer Name">John Carpenter</div>
-                                    <div class="col col-3" data-label="Amount">$115</div>
-                                    
+
+                                    <div class="col col-2" data-label="Customer Name">Maternity</div>
+                                    <div class="col col-3" data-label="Amount">31 days</div>
+
                                 </li>
-                                
+
                             </ul>
                         </div>
 
@@ -954,23 +981,9 @@ input[type="submit"] {
 
                     </html>
                 </div>
-                <div class="column-xs-12 column-md-8">
-                    <figure class="img-container">
-                       <img src="https://source.unsplash.com/XtUd5SiX464">
-                        <figcaption class="img-content">
-                            <h2 class="title">Phone</h2>
-                            <h3 class="category">Showcase</h3>
-                        </figcaption>
-                        <span class="img-content-hover" style="left: 457px; top: 856px;">
-<h2 class="title">Phone</h2>
-<h3 class="category">Showcase</h3>
-</span>
-                    </figure>
-                </div>
-                <!-- <div class="column-xs-12 column-md-6" style="border: 2px solid #f2eaeb;">
-                <br>
-                <br>
-                   <html lang="en">
+                <div class="column-xs-12 column-md-6" style="border: 2px solid #f2eaeb;">
+                    <br>
+                    <html lang="en">
 
                     <head>
                         <meta charset="UTF-8">
@@ -978,7 +991,7 @@ input[type="submit"] {
                         <meta name="apple-mobile-web-app-title" content="CodePen">
                         <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
                         <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-                        
+
                         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
                         <style>
@@ -1005,7 +1018,7 @@ input[type="submit"] {
                             }
                             
                             .responsive-table li {
-                                border-radius: 2px;
+                                border-radius: 3px;
                                 padding: 25px 30px;
                                 display: flex;
                                 justify-content: space-between;
@@ -1021,7 +1034,6 @@ input[type="submit"] {
                             
                             .responsive-table .table-row {
                                 background-color: #ffffff;
-                               
                             }
                             
                             .responsive-table .col-1 {
@@ -1075,41 +1087,38 @@ input[type="submit"] {
 
                     <body translate="no">
                         <div class="container">
-                         <h4 style="font-size:25px;font-weight:bold;text-align:center;text-decoration: underline;">Who's Out</h4>
-                            <ul class="responsive-table"  style="padding-left:20px;padding-right:20px;">
-                                <li class="table-header" style="background:none;font-weight:bold;">
-                                    <div class="col col-2">Name</div>
-                                    <div class="col col-3">Start Date</div>
-                                    <div class="col col-4">End Date</div>
-                                </li>
+                            <h4 style="font-size:25px;font-weight:bold;text-align:center;text-decoration: underline;">Who's Out</h4>
+
+                            <ul class="responsive-table" style="padding-left:20px;padding-right:20px;">
+
                                 <li class="table-row" style="background:none;">
-                                    
+
                                     <div class="col col-2" data-label="Customer Name">John Doe</div>
-                                    <div class="col col-3" data-label="Amount">1/8/2019</div>
-                                    <div class="col col-4" data-label="Payment Status">12/12/2019</div>
+                                    <div class="col col-3" data-label="Amount">12 days</div>
+
                                 </li>
                                 <hr>
                                 <li class="table-row" style="background:none;">
-                                    
-                                    <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
-                                    <div class="col col-3" data-label="Amount">1/8/2019</div>
-                                    <div class="col col-4" data-label="Payment Status">12/12/2019</div>
+
+                                    <div class="col col-2" data-label="Customer Name">Jennifer Smyth</div>
+                                    <div class="col col-3" data-label="Amount">4 days</div>
+
                                 </li>
                                 <hr>
                                 <li class="table-row" style="background:none;">
-                                    
-                                    <div class="col col-2" data-label="Customer Name">John Smith</div>
-                                    <div class="col col-3" data-label="Amount">1/8/2019</div>
-                                    <div class="col col-4" data-label="Payment Status">12/12/2019</div>
+
+                                    <div class="col col-2" data-label="Customer Name">Jorja Smith</div>
+                                    <div class="col col-3" data-label="Amount">5 days</div>
+
                                 </li>
                                 <hr>
                                 <li class="table-row" style="background:none;">
-                                    
+
                                     <div class="col col-2" data-label="Customer Name">John Carpenter</div>
-                                    <div class="col col-3" data-label="Amount">1/8/2019</div>
-                                    <div class="col col-4" data-label="Payment Status">12/12/2019</div>
+                                    <div class="col col-3" data-label="Amount">11 days</div>
+
                                 </li>
-                                
+
                             </ul>
                         </div>
 
@@ -1117,7 +1126,8 @@ input[type="submit"] {
                     </body>
 
                     </html>
-                </div> -->
+                </div>
+
 
                 <div class="column-xs-12">
                     <html lang="en">
@@ -1128,7 +1138,7 @@ input[type="submit"] {
                         <meta name="apple-mobile-web-app-title" content="CodePen">
                         <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
                         <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-                    
+
                         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
                         <style>
@@ -1171,7 +1181,6 @@ input[type="submit"] {
                             
                             .responsive-table .table-row {
                                 background-color: #ffffff;
-                               
                             }
                             
                             .responsive-table .col-1 {
@@ -1225,48 +1234,48 @@ input[type="submit"] {
 
                     <body translate="no">
                         <div class="container" style="border: 2px solid #f2eaeb;">
-                        <br>
-                        <h4 style="font-size:25px;font-weight:bold;text-align:center;text-decoration: underline;">Leave History</h4>
+                            <br>
+                            <h4 style="font-size:25px;font-weight:bold;text-align:center;text-decoration: underline;" id="history">Leave History</h4>
 
                             <ul class="responsive-table" style="padding-left:20px;padding-right:20px;">
                                 <li class="table-header" style="background:none;font-weight:bold;">
-                                    
+
                                     <div class="col col-2">Leave Type</div>
                                     <div class="col col-3">Start Date</div>
                                     <div class="col col-4">End Date</div>
                                     <div class="col col-1">Status</div>
-                                    
+
                                 </li>
                                 <li class="table-row">
-                                   
-                                    <div class="col col-2" data-label="Customer Name">John Doe</div>
+
+                                    <div class="col col-2" data-label="Customer Name">Exam</div>
                                     <div class="col col-3" data-label="Amount">1/2/3030</div>
-                                     <div class="col col-4" data-label="Payment Status">1/2/3030</div>
+                                    <div class="col col-4" data-label="Payment Status">1/2/3030</div>
                                     <div class="col col-5" data-label="Payment Status">Pending</div>
                                 </li>
                                 <hr>
                                 <li class="table-row">
-                                    
-                                     <div class="col col-2" data-label="Customer Name">John Doe</div>
+
+                                    <div class="col col-2" data-label="Customer Name">Annual</div>
                                     <div class="col col-3" data-label="Amount">1/2/3030</div>
-                                     <div class="col col-4" data-label="Payment Status">1/2/3030</div>
-                                    <div class="col col-5" data-label="Payment Status">Pending</div>
+                                    <div class="col col-4" data-label="Payment Status">1/2/3030</div>
+                                    <div class="col col-5" data-label="Payment Status">Approved</div>
                                 </li>
                                 <hr>
                                 <li class="table-row">
-                                    
-                                     <div class="col col-2" data-label="Customer Name">John Doe</div>
+
+                                    <div class="col col-2" data-label="Customer Name">Sick</div>
                                     <div class="col col-3" data-label="Amount">1/2/3030</div>
-                                     <div class="col col-4" data-label="Payment Status">1/2/3030</div>
-                                    <div class="col col-5" data-label="Payment Status">Pending</div>
+                                    <div class="col col-4" data-label="Payment Status">1/2/3030</div>
+                                    <div class="col col-5" data-label="Payment Status">Approved</div>
                                 </li>
                                 <hr>
                                 <li class="table-row">
-                                    
-                                     <div class="col col-2" data-label="Customer Name">John Doe</div>
+
+                                    <div class="col col-2" data-label="Customer Name">Annual</div>
                                     <div class="col col-3" data-label="Amount">1/2/3030</div>
-                                     <div class="col col-4" data-label="Payment Status">1/2/3030</div>
-                                    <div class="col col-5" data-label="Payment Status">Pending</div>
+                                    <div class="col col-4" data-label="Payment Status">1/2/3030</div>
+                                    <div class="col col-5" data-label="Payment Status">Declined</div>
                                 </li>
                             </ul>
                         </div>
@@ -1308,5 +1317,7 @@ input[type="submit"] {
 
 
 </body>
+
+</html>
 
 </html>

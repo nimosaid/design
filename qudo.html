@@ -1,581 +1,52 @@
-<html lang="en-US" class="wf-montserrat-n4-active wf-montserrat-n7-active wf-lato-n3-active wf-lato-n9-active wf-active">
+<html lang="en-US" class="wf-montserrat-n4-active wf-montserrat-n7-active wf-lato-n3-active wf-lato-n9-active wf-active"><head><style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+</style><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style>
 
-<head>
-    <style>
-        .dismissButton {
-            background-color: #fff;
-            border: 1px solid #dadce0;
-            color: #1a73e8;
-            border-radius: 4px;
-            font-family: Roboto, sans-serif;
-            font-size: 14px;
-            height: 36px;
-            cursor: pointer;
-            padding: 0 24px
-        }
-        
-        .dismissButton:hover {
-            background-color: rgba(66, 133, 244, 0.04);
-            border: 1px solid #d2e3fc
-        }
-        
-        .dismissButton:focus {
-            background-color: rgba(66, 133, 244, 0.12);
-            border: 1px solid #d2e3fc;
-            outline: 0
-        }
-        
-        .dismissButton:hover:focus {
-            background-color: rgba(66, 133, 244, 0.16);
-            border: 1px solid #d2e2fd
-        }
-        
-        .dismissButton:active {
-            background-color: rgba(66, 133, 244, 0.16);
-            border: 1px solid #d2e2fd;
-            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15)
-        }
-        
-        .dismissButton:disabled {
-            background-color: #fff;
-            border: 1px solid #f1f3f4;
-            color: #3c4043
-        }
-    </style>
-    <style>
-        .gm-style .gm-style-mtc label,
-        .gm-style .gm-style-mtc div {
-            font-weight: 400
-        }
-    </style>
-    <style>
-        .gm-control-active>img {
-            box-sizing: content-box;
-            display: none;
-            left: 50%;
-            pointer-events: none;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%)
-        }
-        
-        .gm-control-active>img:nth-child(1) {
-            display: block
-        }
-        
-        .gm-control-active:hover>img:nth-child(1),
-        .gm-control-active:active>img:nth-child(1) {
-            display: none
-        }
-        
-        .gm-control-active:hover>img:nth-child(2),
-        .gm-control-active:active>img:nth-child(3) {
-            display: block
-        }
-    </style>
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans">
-    <style>
-        .gm-ui-hover-effect {
-            opacity: .6
-        }
-        
-        .gm-ui-hover-effect:hover {
-            opacity: 1
-        }
-    </style>
-    <style>
-        .gm-style .gm-style-cc span,
-        .gm-style .gm-style-cc a,
-        .gm-style .gm-style-mtc div {
-            font-size: 10px;
-            box-sizing: border-box
-        }
-    </style>
-    <style>
-        @media print {
-            .gm-style .gmnoprint,
-            .gmnoprint {
-                display: none
-            }
-        }
-        
-        @media screen {
-            .gm-style .gmnoscreen,
-            .gmnoscreen {
-                display: none
-            }
-        }
-    </style>
-    <style>
-        .gm-style-pbc {
-            transition: opacity ease-in-out;
-            background-color: rgba(0, 0, 0, 0.45);
-            text-align: center
-        }
-        
-        .gm-style-pbt {
-            font-size: 22px;
-            color: white;
-            font-family: Roboto, Arial, sans-serif;
-            position: relative;
-            margin: 0;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%)
-        }
-    </style>
-    <style>
-        .gm-style img {
-            max-width: none;
-        }
-        
-        .gm-style {
-            font: 400 11px Roboto, Arial, sans-serif;
-            text-decoration: none;
-        }
-    </style>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <link rel="pingback" href="https://livewp.site/wp/md/qudos/xmlrpc.php">
-   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js" type="text/javascript" async=""></script>
-    <script>
-        function fvmuag() {
-            if (navigator.userAgent.match(/x11.*fox\/54|oid\s4.*xus.*ome\/62|oobot|ighth|tmetr|eadles|ingdo/i)) return !1;
-            if (navigator.userAgent.match(/x11.*ome\/75\.0\.3770\.100/i)) {
-                var e = screen.width,
-                    t = screen.height;
-                if ("number" == typeof e && "number" == typeof t && 862 == t && 1367 == e) return !1
-            }
-            return !0
-        }
-    </script>
-    <title>FETCH</title>
-    <script type="text/javascript">
-        var custom_blog_css = "";
-        if (document.getElementById("custom_blog_styles")) {
-            document.getElementById("custom_blog_styles").innerHTML += custom_blog_css;
-        } else if (custom_blog_css !== "") {
-            document.head.innerHTML += '<style id="custom_blog_styles" type="text/css">' + custom_blog_css + '</style>';
-        }
-    </script>
-    <script>
-        /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
-        if (typeof WebFontConfig === "undefined") {
-            WebFontConfig = new Object();
-        }
-        WebFontConfig['google'] = {
-            families: ['Montserrat:400,700', 'Lato:300,900,700&subset=latin']
-        };
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans"><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+</style><style>.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}
+</style>
+<style>@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style>
+<style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style>
+<style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="pingback" href="https://livewp.site/wp/md/qudos/xmlrpc.php"> 
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js" type="text/javascript" async="">
+</script>
+<script>function fvmuag(){if(navigator.userAgent.match(/x11.*fox\/54|oid\s4.*xus.*ome\/62|oobot|ighth|tmetr|eadles|ingdo/i))return!1;if(navigator.userAgent.match(/x11.*ome\/75\.0\.3770\.100/i)){var e=screen.width,t=screen.height;if("number"==typeof e&&"number"==typeof t&&862==t&&1367==e)return!1}return!0}</script>
 
-        (function() {
-            var wf = document.createElement('script');
-            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    </script>
-    <meta property="og:title" content="Being Smart with Time">
-    <meta property="og:type" content="article">
-    <style type="text/css" media="all">
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: italic;
-            font-weight: 100;
-            src: local('Montserrat Thin Italic'), local('Montserrat-ThinItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUOjIg1_i6t8kCHKm459WxZqh7k29U.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: italic;
-            font-weight: 200;
-            src: local('Montserrat ExtraLight Italic'), local('Montserrat-ExtraLightItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZBg_z_PZ2.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: italic;
-            font-weight: 300;
-            src: local('Montserrat Light Italic'), local('Montserrat-LightItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZYgzz_PZ2.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: italic;
-            font-weight: 400;
-            src: local('Montserrat Italic'), local('Montserrat-Italic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUQjIg1_i6t8kCHKm459WxRyS7g.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: italic;
-            font-weight: 500;
-            src: local('Montserrat Medium Italic'), local('Montserrat-MediumItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZOg3z_PZ2.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: italic;
-            font-weight: 600;
-            src: local('Montserrat SemiBold Italic'), local('Montserrat-SemiBoldItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZFgrz_PZ2.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: italic;
-            font-weight: 700;
-            src: local('Montserrat Bold Italic'), local('Montserrat-BoldItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZcgvz_PZ2.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: italic;
-            font-weight: 800;
-            src: local('Montserrat ExtraBold Italic'), local('Montserrat-ExtraBoldItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZbgjz_PZ2.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: italic;
-            font-weight: 900;
-            src: local('Montserrat Black Italic'), local('Montserrat-BlackItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZSgnz_PZ2.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-display: block;
-            font-style: normal;
-            font-weight: 100;
-            src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUQjIg1_i6t8kCHKm45_QpRyS7g.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-display: block;
-            font-style: normal;
-            font-weight: 200;
-            src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_aZA3gnD-A.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-display: block;
-            font-style: normal;
-            font-weight: 300;
-            src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_cJD3gnD-A.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-display: block;
-            font-style: normal;
-            font-weight: 400;
-            src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WlhzQ.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-display: block;
-            font-style: normal;
-            font-weight: 500;
-            src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3gnD-A.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-display: block;
-            font-style: normal;
-            font-weight: 600;
-            src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gnD-A.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-display: block;
-            font-style: normal;
-            font-weight: 700;
-            src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gnD-A.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-display: block;
-            font-style: normal;
-            font-weight: 800;
-            src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_c5H3gnD-A.woff) format('woff')
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-display: block;
-            font-style: normal;
-            font-weight: 900;
-            src: local('Montserrat Black'), local('Montserrat-Black'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_epG3gnD-A.woff) format('woff')
-        }
-    </style>
-    <style id="fvm-header-2" media="only screen and (max-width: 768px)">
-        .woocommerce table.shop_table_responsive thead,
-        .woocommerce-page table.shop_table_responsive thead {
-            display: none
-        }
-        
-        .woocommerce table.shop_table_responsive tbody tr:first-child td:first-child,
-        .woocommerce-page table.shop_table_responsive tbody tr:first-child td:first-child {
-            border-top: 0
-        }
-        
-        .woocommerce table.shop_table_responsive tbody th,
-        .woocommerce-page table.shop_table_responsive tbody th {
-            display: none
-        }
-        
-        .woocommerce table.shop_table_responsive tr,
-        .woocommerce-page table.shop_table_responsive tr {
-            display: block
-        }
-        
-        .woocommerce table.shop_table_responsive tr td,
-        .woocommerce-page table.shop_table_responsive tr td {
-            display: block;
-            text-align: right!important
-        }
-        
-        .woocommerce table.shop_table_responsive tr td.order-actions,
-        .woocommerce-page table.shop_table_responsive tr td.order-actions {
-            text-align: left!important
-        }
-        
-        .woocommerce table.shop_table_responsive tr td::before,
-        .woocommerce-page table.shop_table_responsive tr td::before {
-            content: attr(data-title) ": ";
-            font-weight: 700;
-            float: left
-        }
-        
-        .woocommerce table.shop_table_responsive tr td.actions::before,
-        .woocommerce table.shop_table_responsive tr td.product-remove::before,
-        .woocommerce-page table.shop_table_responsive tr td.actions::before,
-        .woocommerce-page table.shop_table_responsive tr td.product-remove::before {
-            display: none
-        }
-        
-        .woocommerce table.shop_table_responsive tr:nth-child(2n) td,
-        .woocommerce-page table.shop_table_responsive tr:nth-child(2n) td {
-            background-color: rgba(0, 0, 0, .025)
-        }
-        
-        .woocommerce table.my_account_orders tr td.order-actions,
-        .woocommerce-page table.my_account_orders tr td.order-actions {
-            text-align: left
-        }
-        
-        .woocommerce table.my_account_orders tr td.order-actions::before,
-        .woocommerce-page table.my_account_orders tr td.order-actions::before {
-            display: none
-        }
-        
-        .woocommerce table.my_account_orders tr td.order-actions .button,
-        .woocommerce-page table.my_account_orders tr td.order-actions .button {
-            float: none;
-            margin: .125em .25em .125em 0
-        }
-        
-        .woocommerce .col2-set .col-1,
-        .woocommerce .col2-set .col-2,
-        .woocommerce-page .col2-set .col-1,
-        .woocommerce-page .col2-set .col-2 {
-            float: none;
-            width: 100%
-        }
-        
-        .woocommerce ul.products[class*=columns-] li.product,
-        .woocommerce-page ul.products[class*=columns-] li.product {
-            width: 48%;
-            float: left;
-            clear: both;
-            margin: 0 0 2.992em
-        }
-        
-        .woocommerce ul.products[class*=columns-] li.product:nth-child(2n),
-        .woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n) {
-            float: right;
-            clear: none!important
-        }
-        
-        .woocommerce #content div.product div.images,
-        .woocommerce #content div.product div.summary,
-        .woocommerce div.product div.images,
-        .woocommerce div.product div.summary,
-        .woocommerce-page #content div.product div.images,
-        .woocommerce-page #content div.product div.summary,
-        .woocommerce-page div.product div.images,
-        .woocommerce-page div.product div.summary {
-            float: none;
-            width: 100%
-        }
-        
-        .woocommerce #content table.cart .product-thumbnail,
-        .woocommerce table.cart .product-thumbnail,
-        .woocommerce-page #content table.cart .product-thumbnail,
-        .woocommerce-page table.cart .product-thumbnail {
-            display: none
-        }
-        
-        .woocommerce #content table.cart td.actions,
-        .woocommerce table.cart td.actions,
-        .woocommerce-page #content table.cart td.actions,
-        .woocommerce-page table.cart td.actions {
-            text-align: left
-        }
-        
-        .woocommerce #content table.cart td.actions .coupon,
-        .woocommerce table.cart td.actions .coupon,
-        .woocommerce-page #content table.cart td.actions .coupon,
-        .woocommerce-page table.cart td.actions .coupon {
-            float: none;
-            padding-bottom: .5em
-        }
-        
-        .woocommerce #content table.cart td.actions .coupon::after,
-        .woocommerce #content table.cart td.actions .coupon::before,
-        .woocommerce table.cart td.actions .coupon::after,
-        .woocommerce table.cart td.actions .coupon::before,
-        .woocommerce-page #content table.cart td.actions .coupon::after,
-        .woocommerce-page #content table.cart td.actions .coupon::before,
-        .woocommerce-page table.cart td.actions .coupon::after,
-        .woocommerce-page table.cart td.actions .coupon::before {
-            content: ' ';
-            display: table
-        }
-        
-        .woocommerce #content table.cart td.actions .coupon::after,
-        .woocommerce table.cart td.actions .coupon::after,
-        .woocommerce-page #content table.cart td.actions .coupon::after,
-        .woocommerce-page table.cart td.actions .coupon::after {
-            clear: both
-        }
-        
-        .woocommerce #content table.cart td.actions .coupon .button,
-        .woocommerce #content table.cart td.actions .coupon .input-text,
-        .woocommerce #content table.cart td.actions .coupon input,
-        .woocommerce table.cart td.actions .coupon .button,
-        .woocommerce table.cart td.actions .coupon .input-text,
-        .woocommerce table.cart td.actions .coupon input,
-        .woocommerce-page #content table.cart td.actions .coupon .button,
-        .woocommerce-page #content table.cart td.actions .coupon .input-text,
-        .woocommerce-page #content table.cart td.actions .coupon input,
-        .woocommerce-page table.cart td.actions .coupon .button,
-        .woocommerce-page table.cart td.actions .coupon .input-text,
-        .woocommerce-page table.cart td.actions .coupon input {
-            width: 48%;
-            box-sizing: border-box
-        }
-        
-        .woocommerce #content table.cart td.actions .coupon .button.alt,
-        .woocommerce #content table.cart td.actions .coupon .input-text+.button,
-        .woocommerce table.cart td.actions .coupon .button.alt,
-        .woocommerce table.cart td.actions .coupon .input-text+.button,
-        .woocommerce-page #content table.cart td.actions .coupon .button.alt,
-        .woocommerce-page #content table.cart td.actions .coupon .input-text+.button,
-        .woocommerce-page table.cart td.actions .coupon .button.alt,
-        .woocommerce-page table.cart td.actions .coupon .input-text+.button {
-            float: right
-        }
-        
-        .woocommerce #content table.cart td.actions .button,
-        .woocommerce table.cart td.actions .button,
-        .woocommerce-page #content table.cart td.actions .button,
-        .woocommerce-page table.cart td.actions .button {
-            display: block;
-            width: 100%
-        }
-        
-        .woocommerce .cart-collaterals .cart_totals,
-        .woocommerce .cart-collaterals .cross-sells,
-        .woocommerce .cart-collaterals .shipping_calculator,
-        .woocommerce-page .cart-collaterals .cart_totals,
-        .woocommerce-page .cart-collaterals .cross-sells,
-        .woocommerce-page .cart-collaterals .shipping_calculator {
-            width: 100%;
-            float: none;
-            text-align: left
-        }
-        
-        .woocommerce-page.woocommerce-checkout form.login .form-row,
-        .woocommerce.woocommerce-checkout form.login .form-row {
-            width: 100%;
-            float: none
-        }
-        
-        .woocommerce #payment .terms,
-        .woocommerce-page #payment .terms {
-            text-align: left;
-            padding: 0
-        }
-        
-        .woocommerce #payment #place_order,
-        .woocommerce-page #payment #place_order {
-            float: none;
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 1em
-        }
-        
-        .woocommerce .lost_reset_password .form-row-first,
-        .woocommerce .lost_reset_password .form-row-last,
-        .woocommerce-page .lost_reset_password .form-row-first,
-        .woocommerce-page .lost_reset_password .form-row-last {
-            width: 100%;
-            float: none;
-            margin-right: 0
-        }
-        
-        .woocommerce-account .woocommerce-MyAccount-content,
-        .woocommerce-account .woocommerce-MyAccount-navigation {
-            float: none;
-            width: 100%
-        }
-        
-        .single-product .twentythirteen .panel {
-            padding-left: 20px!important;
-            padding-right: 20px!important
-        }
-    </style>
-    <!--[if IE]><link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='https://livewp.site/wp/md/qudos/wp-content/plugins/mailchimp/css/ie.css' type='text/css' media='all' /> <![endif]-->
-    <style id="woocommerce-inline-inline-css" type="text/css">
-        .woocommerce form .form-row .required {
-            visibility: visible;
-        }
-    </style>
-    <link rel="stylesheet" id="mailchimpSF_main_css-css" href="https://livewp.site/wp/md/qudos/wp/md/qudos/?mcsf_action=main_css&amp;ver=5.3.2" type="text/css" media="all">
-    <link rel="stylesheet" id="fvm-header-1-css" href="https://livewp.site/wp/md/qudos/wp-content/uploads/sites/48/cache/fvm/1578987950/out/header-6ffd2830.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="fvm-header-3-css" href="https://livewp.site/wp/md/qudos/wp-content/uploads/sites/48/cache/fvm/1578987950/out/header-1d0c7907.min.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CLato:300,900,700&amp;subset=latin">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript">
-        /*  */
-        var gt3_themes_core = {
-            "ajaxurl": "https:\/\/livewp.site\/wp\/md\/qudos\/wp-admin\/admin-ajax.php"
-        };
-        var mailchimpSF = {
-            "ajax_url": "https:\/\/livewp.site\/wp\/md\/qudos\/"
-        };
-        /*  */
-    </script>
-    <script type="text/javascript" src="https://livewp.site/wp/md/qudos/wp-content/uploads/sites/48/cache/fvm/1578987950/out/header-aa78297a.min.js"></script>
-    <link rel="https://api.w.org/" href="https://livewp.site/wp/md/qudos/wp-json/">
-    <link rel="canonical" href="https://livewp.site/wp/md/qudos/news/">
-    <link rel="alternate" type="application/json+oembed" href="https://livewp.site/wp/md/qudos/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flivewp.site%2Fwp%2Fmd%2Fqudos%2Fnews%2F">
-    <link rel="alternate" type="text/xml+oembed" href="https://livewp.site/wp/md/qudos/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flivewp.site%2Fwp%2Fmd%2Fqudos%2Fnews%2F&amp;format=xml">
-    <script type="text/javascript">
-        jQuery(function($) {
+<title>Fetch</title> 
+
+<script type="text/javascript">var custom_blog_css = "";
+            if (document.getElementById("custom_blog_styles")) {
+                document.getElementById("custom_blog_styles").innerHTML += custom_blog_css;
+            } else if (custom_blog_css !== "") {
+                document.head.innerHTML += '<style id="custom_blog_styles" type="text/css">'+custom_blog_css+'</style>';
+            }</script> <script>/* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+                            if ( typeof WebFontConfig === "undefined" ) {
+                                WebFontConfig = new Object();
+                            }
+                            WebFontConfig['google'] = {families: ['Montserrat:400,700', 'Lato:300,900,700&subset=latin']};
+
+                            (function() {
+                                var wf = document.createElement( 'script' );
+                                wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+                                wf.type = 'text/javascript';
+                                wf.async = 'true';
+                                var s = document.getElementsByTagName( 'script' )[0];
+                                s.parentNode.insertBefore( wf, s );
+                            })();</script> <meta property="og:title" content="Being Smart with Time"><meta property="og:type" content="article"><meta property="og:url" content="https://livewp.site/wp/md/qudos/news/"><meta property="og:site_name" content="Qudos"><meta property="og:image" content="https://livewp.site/wp/md/qudos/wp-content/uploads/sites/48/2018/08/logo_light.png"><style type="text/css" media="all">@font-face{font-family:'Montserrat';font-style:italic;font-weight:100;src:local('Montserrat Thin Italic'),local('Montserrat-ThinItalic'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUOjIg1_i6t8kCHKm459WxZqh7k29U.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:italic;font-weight:200;src:local('Montserrat ExtraLight Italic'),local('Montserrat-ExtraLightItalic'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZBg_z_PZ2.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:italic;font-weight:300;src:local('Montserrat Light Italic'),local('Montserrat-LightItalic'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZYgzz_PZ2.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:italic;font-weight:400;src:local('Montserrat Italic'),local('Montserrat-Italic'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUQjIg1_i6t8kCHKm459WxRyS7g.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:italic;font-weight:500;src:local('Montserrat Medium Italic'),local('Montserrat-MediumItalic'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZOg3z_PZ2.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:italic;font-weight:600;src:local('Montserrat SemiBold Italic'),local('Montserrat-SemiBoldItalic'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZFgrz_PZ2.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:italic;font-weight:700;src:local('Montserrat Bold Italic'),local('Montserrat-BoldItalic'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZcgvz_PZ2.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:italic;font-weight:800;src:local('Montserrat ExtraBold Italic'),local('Montserrat-ExtraBoldItalic'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZbgjz_PZ2.woff) format('woff')}@font-face{font-family:'Montserrat';font-style:italic;font-weight:900;src:local('Montserrat Black Italic'),local('Montserrat-BlackItalic'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZSgnz_PZ2.woff) format('woff')}@font-face{font-family:'Montserrat';font-display:block;font-style:normal;font-weight:100;src:local('Montserrat Thin'),local('Montserrat-Thin'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUQjIg1_i6t8kCHKm45_QpRyS7g.woff) format('woff')}@font-face{font-family:'Montserrat';font-display:block;font-style:normal;font-weight:200;src:local('Montserrat ExtraLight'),local('Montserrat-ExtraLight'),url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_aZA3gnD-A.woff) format('woff')}@font-face{font-family:'Montserrat';font-display:block;font-style:normal;font-weight:300;src:local('Montserrat Light'),local('Montserrat-Light'),url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_cJD3gnD-A.woff) format('woff')}@font-face{font-family:'Montserrat';font-display:block;font-style:normal;font-weight:400;src:local('Montserrat Regular'),local('Montserrat-Regular'),url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WlhzQ.woff) format('woff')}@font-face{font-family:'Montserrat';font-display:block;font-style:normal;font-weight:500;src:local('Montserrat Medium'),local('Montserrat-Medium'),url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3gnD-A.woff) format('woff')}@font-face{font-family:'Montserrat';font-display:block;font-style:normal;font-weight:600;src:local('Montserrat SemiBold'),local('Montserrat-SemiBold'),url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gnD-A.woff) format('woff')}@font-face{font-family:'Montserrat';font-display:block;font-style:normal;font-weight:700;src:local('Montserrat Bold'),local('Montserrat-Bold'),url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gnD-A.woff) format('woff')}@font-face{font-family:'Montserrat';font-display:block;font-style:normal;font-weight:800;src:local('Montserrat ExtraBold'),local('Montserrat-ExtraBold'),url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_c5H3gnD-A.woff) format('woff')}@font-face{font-family:'Montserrat';font-display:block;font-style:normal;font-weight:900;src:local('Montserrat Black'),local('Montserrat-Black'),url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_epG3gnD-A.woff) format('woff')}</style><style id="fvm-header-2" media="only screen and (max-width: 768px)">.woocommerce table.shop_table_responsive thead,.woocommerce-page table.shop_table_responsive thead{display:none}.woocommerce table.shop_table_responsive tbody tr:first-child td:first-child,.woocommerce-page table.shop_table_responsive tbody tr:first-child td:first-child{border-top:0}.woocommerce table.shop_table_responsive tbody th,.woocommerce-page table.shop_table_responsive tbody th{display:none}.woocommerce table.shop_table_responsive tr,.woocommerce-page table.shop_table_responsive tr{display:block}.woocommerce table.shop_table_responsive tr td,.woocommerce-page table.shop_table_responsive tr td{display:block;text-align:right!important}.woocommerce table.shop_table_responsive tr td.order-actions,.woocommerce-page table.shop_table_responsive tr td.order-actions{text-align:left!important}.woocommerce table.shop_table_responsive tr td::before,.woocommerce-page table.shop_table_responsive tr td::before{content:attr(data-title) ": ";font-weight:700;float:left}.woocommerce table.shop_table_responsive tr td.actions::before,.woocommerce table.shop_table_responsive tr td.product-remove::before,.woocommerce-page table.shop_table_responsive tr td.actions::before,.woocommerce-page table.shop_table_responsive tr td.product-remove::before{display:none}.woocommerce table.shop_table_responsive tr:nth-child(2n) td,.woocommerce-page table.shop_table_responsive tr:nth-child(2n) td{background-color:rgba(0,0,0,.025)}.woocommerce table.my_account_orders tr td.order-actions,.woocommerce-page table.my_account_orders tr td.order-actions{text-align:left}.woocommerce table.my_account_orders tr td.order-actions::before,.woocommerce-page table.my_account_orders tr td.order-actions::before{display:none}.woocommerce table.my_account_orders tr td.order-actions .button,.woocommerce-page table.my_account_orders tr td.order-actions .button{float:none;margin:.125em .25em .125em 0}.woocommerce .col2-set .col-1,.woocommerce .col2-set .col-2,.woocommerce-page .col2-set .col-1,.woocommerce-page .col2-set .col-2{float:none;width:100%}.woocommerce ul.products[class*=columns-] li.product,.woocommerce-page ul.products[class*=columns-] li.product{width:48%;float:left;clear:both;margin:0 0 2.992em}.woocommerce ul.products[class*=columns-] li.product:nth-child(2n),.woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n){float:right;clear:none!important}.woocommerce #content div.product div.images,.woocommerce #content div.product div.summary,.woocommerce div.product div.images,.woocommerce div.product div.summary,.woocommerce-page #content div.product div.images,.woocommerce-page #content div.product div.summary,.woocommerce-page div.product div.images,.woocommerce-page div.product div.summary{float:none;width:100%}.woocommerce #content table.cart .product-thumbnail,.woocommerce table.cart .product-thumbnail,.woocommerce-page #content table.cart .product-thumbnail,.woocommerce-page table.cart .product-thumbnail{display:none}.woocommerce #content table.cart td.actions,.woocommerce table.cart td.actions,.woocommerce-page #content table.cart td.actions,.woocommerce-page table.cart td.actions{text-align:left}.woocommerce #content table.cart td.actions .coupon,.woocommerce table.cart td.actions .coupon,.woocommerce-page #content table.cart td.actions .coupon,.woocommerce-page table.cart td.actions .coupon{float:none;padding-bottom:.5em}.woocommerce #content table.cart td.actions .coupon::after,.woocommerce #content table.cart td.actions .coupon::before,.woocommerce table.cart td.actions .coupon::after,.woocommerce table.cart td.actions .coupon::before,.woocommerce-page #content table.cart td.actions .coupon::after,.woocommerce-page #content table.cart td.actions .coupon::before,.woocommerce-page table.cart td.actions .coupon::after,.woocommerce-page table.cart td.actions .coupon::before{content:' ';display:table}.woocommerce #content table.cart td.actions .coupon::after,.woocommerce table.cart td.actions .coupon::after,.woocommerce-page #content table.cart td.actions .coupon::after,.woocommerce-page table.cart td.actions .coupon::after{clear:both}.woocommerce #content table.cart td.actions .coupon .button,.woocommerce #content table.cart td.actions .coupon .input-text,.woocommerce #content table.cart td.actions .coupon input,.woocommerce table.cart td.actions .coupon .button,.woocommerce table.cart td.actions .coupon .input-text,.woocommerce table.cart td.actions .coupon input,.woocommerce-page #content table.cart td.actions .coupon .button,.woocommerce-page #content table.cart td.actions .coupon .input-text,.woocommerce-page #content table.cart td.actions .coupon input,.woocommerce-page table.cart td.actions .coupon .button,.woocommerce-page table.cart td.actions .coupon .input-text,.woocommerce-page table.cart td.actions .coupon input{width:48%;box-sizing:border-box}.woocommerce #content table.cart td.actions .coupon .button.alt,.woocommerce #content table.cart td.actions .coupon .input-text+.button,.woocommerce table.cart td.actions .coupon .button.alt,.woocommerce table.cart td.actions .coupon .input-text+.button,.woocommerce-page #content table.cart td.actions .coupon .button.alt,.woocommerce-page #content table.cart td.actions .coupon .input-text+.button,.woocommerce-page table.cart td.actions .coupon .button.alt,.woocommerce-page table.cart td.actions .coupon .input-text+.button{float:right}.woocommerce #content table.cart td.actions .button,.woocommerce table.cart td.actions .button,.woocommerce-page #content table.cart td.actions .button,.woocommerce-page table.cart td.actions .button{display:block;width:100%}.woocommerce .cart-collaterals .cart_totals,.woocommerce .cart-collaterals .cross-sells,.woocommerce .cart-collaterals .shipping_calculator,.woocommerce-page .cart-collaterals .cart_totals,.woocommerce-page .cart-collaterals .cross-sells,.woocommerce-page .cart-collaterals .shipping_calculator{width:100%;float:none;text-align:left}.woocommerce-page.woocommerce-checkout form.login .form-row,.woocommerce.woocommerce-checkout form.login .form-row{width:100%;float:none}.woocommerce #payment .terms,.woocommerce-page #payment .terms{text-align:left;padding:0}.woocommerce #payment #place_order,.woocommerce-page #payment #place_order{float:none;width:100%;box-sizing:border-box;margin-bottom:1em}.woocommerce .lost_reset_password .form-row-first,.woocommerce .lost_reset_password .form-row-last,.woocommerce-page .lost_reset_password .form-row-first,.woocommerce-page .lost_reset_password .form-row-last{width:100%;float:none;margin-right:0}.woocommerce-account .woocommerce-MyAccount-content,.woocommerce-account .woocommerce-MyAccount-navigation{float:none;width:100%}.single-product .twentythirteen .panel{padding-left:20px!important;padding-right:20px!important}</style>
+                            <style id="woocommerce-inline-inline-css" type="text/css">.woocommerce form .form-row .required { visibility: visible; }</style>
+                            <link rel="stylesheet" id="mailchimpSF_main_css-css" href="https://livewp.site/wp/md/qudos/wp/md/qudos/?mcsf_action=main_css&amp;ver=5.3.2" type="text/css" media="all">
+                            <link rel="stylesheet" id="fvm-header-1-css" href="https://livewp.site/wp/md/qudos/wp-content/uploads/sites/48/cache/fvm/1581878108/out/header-6ffd2830.min.css" type="text/css" media="all">
+                            <link rel="stylesheet" id="fvm-header-3-css" href="https://livewp.site/wp/md/qudos/wp-content/uploads/sites/48/cache/fvm/1581878108/out/header-1d0c7907.min.css" type="text/css" media="all">
+                             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CLato:300,900,700&amp;subset=latin">
+                            <script type="text/javascript">/*  */
+var gt3_themes_core = {"ajaxurl":"https:\/\/livewp.site\/wp\/md\/qudos\/wp-admin\/admin-ajax.php"};
+var mailchimpSF = {"ajax_url":"https:\/\/livewp.site\/wp\/md\/qudos\/"};
+/*  */</script> 
+<script type="text/javascript" src="https://livewp.site/wp/md/qudos/wp-content/uploads/sites/48/cache/fvm/1581878108/out/header-aa78297a.min.js"></script><link rel="https://api.w.org/" href="https://livewp.site/wp/md/qudos/wp-json/"><link rel="canonical" href="https://livewp.site/wp/md/qudos/news/"><link rel="alternate" type="application/json+oembed" href="https://livewp.site/wp/md/qudos/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flivewp.site%2Fwp%2Fmd%2Fqudos%2Fnews%2F"><link rel="alternate" type="text/xml+oembed" href="https://livewp.site/wp/md/qudos/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flivewp.site%2Fwp%2Fmd%2Fqudos%2Fnews%2F&amp;format=xml"> <script type="text/javascript">jQuery(function($) {
             $('.date-pick').each(function() {
                 var format = $(this).data('format') || 'mm/dd/yyyy';
                 format = format.replace(/yyyy/i, 'yy');
@@ -584,9 +55,7 @@
                     constrainInput: false,
                     changeMonth: true,
                     changeYear: true,
-                    beforeShow: function(input, inst) {
-                        $('#ui-datepicker-div').addClass('show');
-                    },
+                    beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
                     dateFormat: format.toLowerCase(),
                 });
             });
@@ -599,78 +68,26 @@
                     constrainInput: false,
                     changeMonth: true,
                     changeYear: false,
-                    minDate: new Date(d.getFullYear(), 1 - 1, 1),
-                    maxDate: new Date(d.getFullYear(), 12 - 1, 31),
-                    beforeShow: function(input, inst) {
-                        $('#ui-datepicker-div').removeClass('show');
-                    },
+                    minDate: new Date(d.getFullYear(), 1-1, 1),
+                    maxDate: new Date(d.getFullYear(), 12-1, 31),
+                    beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
                     dateFormat: format.toLowerCase(),
                 });
 
             });
 
-        });
-    </script> <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
-    <meta name="generator" content="Powered by Slider Revolution 6.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
-    <script type="text/javascript">
-        function setREVStartSize(t) {
-            try {
-                var h, e = document.getElementById(t.c).parentNode.offsetWidth;
-                if (e = 0 === e || isNaN(e) ? window.innerWidth : e, t.tabw = void 0 === t.tabw ? 0 : parseInt(t.tabw), t.thumbw = void 0 === t.thumbw ? 0 : parseInt(t.thumbw), t.tabh = void 0 === t.tabh ? 0 : parseInt(t.tabh), t.thumbh = void 0 === t.thumbh ? 0 : parseInt(t.thumbh), t.tabhide = void 0 === t.tabhide ? 0 : parseInt(t.tabhide), t.thumbhide = void 0 === t.thumbhide ? 0 : parseInt(t.thumbhide), t.mh = void 0 === t.mh || "" == t.mh || "auto" === t.mh ? 0 : parseInt(t.mh, 0), "fullscreen" === t.layout || "fullscreen" === t.l) h = Math.max(t.mh, window.innerHeight);
-                else {
-                    for (var i in t.gw = Array.isArray(t.gw) ? t.gw : [t.gw], t.rl) void 0 !== t.gw[i] && 0 !== t.gw[i] || (t.gw[i] = t.gw[i - 1]);
-                    for (var i in t.gh = void 0 === t.el || "" === t.el || Array.isArray(t.el) && 0 == t.el.length ? t.gh : t.el, t.gh = Array.isArray(t.gh) ? t.gh : [t.gh], t.rl) void 0 !== t.gh[i] && 0 !== t.gh[i] || (t.gh[i] = t.gh[i - 1]);
-                    var r, a = new Array(t.rl.length),
-                        n = 0;
-                    for (var i in t.tabw = t.tabhide >= e ? 0 : t.tabw, t.thumbw = t.thumbhide >= e ? 0 : t.thumbw, t.tabh = t.tabhide >= e ? 0 : t.tabh, t.thumbh = t.thumbhide >= e ? 0 : t.thumbh, t.rl) a[i] = t.rl[i] < window.innerWidth ? 0 : t.rl[i];
-                    for (var i in r = a[0], a) r > a[i] && 0 < a[i] && (r = a[i], n = i);
-                    var d = e > t.gw[n] + t.tabw + t.thumbw ? 1 : (e - (t.tabw + t.thumbw)) / t.gw[n];
-                    h = t.gh[n] * d + (t.tabh + t.thumbh)
-                }
-                void 0 === window.rs_init_css && (window.rs_init_css = document.head.appendChild(document.createElement("style"))), document.getElementById(t.c).height = h, window.rs_init_css.innerHTML += "#" + t.c + "_wrapper { height: " + h + "px }"
-            } catch (t) {
-                console.log("Failure at Presize of Slider:" + t)
-            }
-        };
-    </script>
-    <style type="text/css" title="dynamic-css" class="options-output">
-        .gt3_delimiter1 {
-            height: 1em;
-        }
-        
-        .gt3_delimiter2 {
-            height: 1em;
-        }
-        
-        .gt3_delimiter3 {
-            height: 1em;
-        }
-        
-        .gt3_delimiter4 {
-            height: 1em;
-        }
-        
-        .gt3_delimiter5 {
-            height: 1em;
-        }
-        
-        .gt3_delimiter6 {
-            height: 1em;
-        }
-    </style>
-    <script type="text/javascript">
-        jQuery(document).ready(function() {
+        });</script> 
+        <noscript>
+        <style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript><meta name="generator" content="Powered by Slider Revolution 6.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."> 
+        <script type="text/javascript">function setREVStartSize(t){try{var h,e=document.getElementById(t.c).parentNode.offsetWidth;if(e=0===e||isNaN(e)?window.innerWidth:e,t.tabw=void 0===t.tabw?0:parseInt(t.tabw),t.thumbw=void 0===t.thumbw?0:parseInt(t.thumbw),t.tabh=void 0===t.tabh?0:parseInt(t.tabh),t.thumbh=void 0===t.thumbh?0:parseInt(t.thumbh),t.tabhide=void 0===t.tabhide?0:parseInt(t.tabhide),t.thumbhide=void 0===t.thumbhide?0:parseInt(t.thumbhide),t.mh=void 0===t.mh||""==t.mh||"auto"===t.mh?0:parseInt(t.mh,0),"fullscreen"===t.layout||"fullscreen"===t.l)h=Math.max(t.mh,window.innerHeight);else{for(var i in t.gw=Array.isArray(t.gw)?t.gw:[t.gw],t.rl)void 0!==t.gw[i]&&0!==t.gw[i]||(t.gw[i]=t.gw[i-1]);for(var i in t.gh=void 0===t.el||""===t.el||Array.isArray(t.el)&&0==t.el.length?t.gh:t.el,t.gh=Array.isArray(t.gh)?t.gh:[t.gh],t.rl)void 0!==t.gh[i]&&0!==t.gh[i]||(t.gh[i]=t.gh[i-1]);var r,a=new Array(t.rl.length),n=0;for(var i in t.tabw=t.tabhide>=e?0:t.tabw,t.thumbw=t.thumbhide>=e?0:t.thumbw,t.tabh=t.tabhide>=e?0:t.tabh,t.thumbh=t.thumbhide>=e?0:t.thumbh,t.rl)a[i]=t.rl[i]<window.innerWidth?0:t.rl[i];for(var i in r=a[0],a)r>a[i]&&0<a[i]&&(r=a[i],n=i);var d=e>t.gw[n]+t.tabw+t.thumbw?1:(e-(t.tabw+t.thumbw))/t.gw[n];h=t.gh[n]*d+(t.tabh+t.thumbh)}void 0===window.rs_init_css&&(window.rs_init_css=document.head.appendChild(document.createElement("style"))),document.getElementById(t.c).height=h,window.rs_init_css.innerHTML+="#"+t.c+"_wrapper { height: "+h+"px }"}catch(t){console.log("Failure at Presize of Slider:"+t)}};</script> <style type="text/css" title="dynamic-css" class="options-output">.gt3_delimiter1{height:1em;}.gt3_delimiter2{height:1em;}.gt3_delimiter3{height:1em;}.gt3_delimiter4{height:1em;}.gt3_delimiter5{height:1em;}.gt3_delimiter6{height:1em;}</style><script type="text/javascript">jQuery(document).ready(function(){
 
-        });
-    </script>
-
-
-    <body class="page-template page-template-full-width page-template-full-width-php page page-id-4105 theme-qudos woocommerce-js font-awesome-4-shim elementor-default elementor-page elementor-page-4105 page-loaded" data-theme-color="#6a77bb" data-gr-c-s-loaded="true"
-        data-elementor-device-mode="desktop">
-
-
-        <!-- Start of navbar section  -->
-        <div class="sticky_header sticky_header--tablet sticky_header--mobile header_sticky_shadow sticky_on" data-sticky-type="classic">
+});</script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/overlay.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d-37.85578241339697&amp;2d144.78693678909167&amp;2m2&amp;1d-37.77832684908998&amp;2d145.11924614563458&amp;2u14&amp;4sen-US&amp;5e0&amp;6sm%40500000000&amp;7b0&amp;8e0&amp;callback=_xdc_._lh4u0v&amp;key=AIzaSyBx1xhdC2KnFKbwbncI0fpgC7i8zpR5rtw&amp;token=99200"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps/vt?pb=!1m4!1m3!1i14!2i14786!3i10052!1m4!1m3!1i14!2i14786!3i10053!1m4!1m3!1i14!2i14787!3i10052!1m4!1m3!1i14!2i14787!3i10053!1m4!1m3!1i14!2i14786!3i10054!1m4!1m3!1i14!2i14787!3i10054!1m4!1m3!1i14!2i14788!3i10052!1m4!1m3!1i14!2i14788!3i10053!1m4!1m3!1i14!2i14789!3i10052!1m4!1m3!1i14!2i14789!3i10053!1m4!1m3!1i14!2i14788!3i10054!1m4!1m3!1i14!2i14789!3i10054!1m4!1m3!1i14!2i14790!3i10052!1m4!1m3!1i14!2i14790!3i10053!1m4!1m3!1i14!2i14791!3i10052!1m4!1m3!1i14!2i14791!3i10053!1m4!1m3!1i14!2i14790!3i10054!1m4!1m3!1i14!2i14791!3i10054!2m3!1e0!2sm!3i500215222!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmwudC5mfHAuczozNnxwLmM6I2ZmMDAwMDAwfHAubDo0MCxzLmU6bC50LnN8cC52Om9ufHAuYzojZmYwMDAwMDB8cC5sOjE2LHMuZTpsLml8cC52Om9mZixzLnQ6MXxzLmU6Zy5mfHAuYzojZmYzNTM4M2R8cC5sOjAscy50OjF8cy5lOmcuc3xwLmM6I2ZmMDAwMDAwfHAubDoxN3xwLnc6MS4yLHMudDoxfHMuZTpsfHAudjpvZmYscy50OjE3fHAudjpzaW1wbGlmaWVkLHMudDoxN3xzLmU6Z3xwLnY6c2ltcGxpZmllZCxzLnQ6MTd8cy5lOmwudHxwLnY6c2ltcGxpZmllZCxzLnQ6MTh8cC52Om9mZixzLnQ6MTl8cC52OnNpbXBsaWZpZWR8cC5zOi0xMDB8cC5sOjMwLHMudDoyMHxwLnY6b2ZmLHMudDoyMXxwLnY6b2ZmLHMudDo1fHAudjpzaW1wbGlmaWVkfHAuZzowLjAwfHAubDo3NCxzLnQ6NXxzLmU6Z3xwLmM6I2ZmMDAwMDAwfHAubDoyMCxzLnQ6NXxzLmU6Zy5mfHAuYzojZmYzNTM4M2Qscy50OjgxfHAubDozLHMudDoyfHAudjpvZmYscy50OjJ8cy5lOmd8cC5jOiNmZjAwMDAwMHxwLmw6MjEscy50OjM0fHMuZTpnLmZ8cC5jOiNmZmZmMDAwMCxzLnQ6M3xzLmU6Z3xwLnY6c2ltcGxpZmllZCxzLnQ6NDl8cy5lOmcuZnxwLmM6I2ZmMmEyZDMyfHAubDowLHMudDo0OXxzLmU6Zy5zfHAuYzojZmYwMDAwMDB8cC5sOjI5fHAudzowLjIscy50OjUwfHMuZTpnfHAuYzojZmYwMDAwMDB8cC5sOjE4LHMudDo1MHxzLmU6Zy5mfHAuYzojZmYyYTJkMzIscy50OjUxfHMuZTpnfHAuYzojZmYwMDAwMDB8cC5sOjE2LHMudDo1MXxzLmU6Zy5mfHAuYzojZmYyYTJkMzIscy50OjR8cy5lOmd8cC5jOiNmZjAwMDAwMHxwLmw6MTkscy50OjR8cy5lOmcuZnxwLmM6I2ZmMzUzODNkLHMudDo2fHMuZTpnfHAuYzojZmYwMDAwMDB8cC5sOjE3LHMudDo2fHMuZTpnLmZ8cC5jOiNmZjI3MmEyZg!4e3!12m1!5b1&amp;callback=_xdc_._9ax1eh&amp;key=AIzaSyBx1xhdC2KnFKbwbncI0fpgC7i8zpR5rtw&amp;token=127657"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Flivewp.site%2Fwp%2Fmd%2Fqudos%2Fnews%2F&amp;4sAIzaSyBx1xhdC2KnFKbwbncI0fpgC7i8zpR5rtw&amp;callback=_xdc_._t91c02&amp;key=AIzaSyBx1xhdC2KnFKbwbncI0fpgC7i8zpR5rtw&amp;token=54974"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/39/10/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/QuotaService.RecordEvent?1shttps%3A%2F%2Flivewp.site%2Fwp%2Fmd%2Fqudos%2Fnews%2F&amp;3sAIzaSyBx1xhdC2KnFKbwbncI0fpgC7i8zpR5rtw&amp;7sqghxv3&amp;10e1&amp;callback=_xdc_._gyfyzy&amp;key=AIzaSyBx1xhdC2KnFKbwbncI0fpgC7i8zpR5rtw&amp;token=129177"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps/vt?pb=!1m4!1m3!1i14!2i14786!3i10052!1m4!1m3!1i14!2i14786!3i10053!1m4!1m3!1i14!2i14787!3i10052!1m4!1m3!1i14!2i14787!3i10053!1m4!1m3!1i14!2i14786!3i10054!1m4!1m3!1i14!2i14787!3i10054!1m4!1m3!1i14!2i14788!3i10052!1m4!1m3!1i14!2i14788!3i10053!1m4!1m3!1i14!2i14789!3i10052!1m4!1m3!1i14!2i14789!3i10053!1m4!1m3!1i14!2i14788!3i10054!1m4!1m3!1i14!2i14789!3i10054!1m4!1m3!1i14!2i14790!3i10052!1m4!1m3!1i14!2i14790!3i10053!1m4!1m3!1i14!2i14791!3i10052!1m4!1m3!1i14!2i14791!3i10053!1m4!1m3!1i14!2i14790!3i10054!1m4!1m3!1i14!2i14791!3i10054!2m3!1e0!2sm!3i500215222!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e3!12m1!5b1&amp;callback=_xdc_._79vjfw&amp;key=AIzaSyBx1xhdC2KnFKbwbncI0fpgC7i8zpR5rtw&amp;token=44409"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!-- Body content -->
+<body class="page-template page-template-full-width page-template-full-width-php page page-id-4105 theme-qudos woocommerce-js font-awesome-4-shim elementor-default elementor-page elementor-page-4105 page-loaded" data-theme-color="#6a77bb" data-elementor-device-mode="desktop">
+<!-- Start of nabar content -->
+<div class="sticky_header sticky_header--tablet sticky_header--mobile header_sticky_shadow sticky_on" data-sticky-type="classic">
             <div class="gt3_header_builder__container">
                 <div class="gt3_header_builder__section gt3_header_builder__section--middle gt3_header_builder__section--hide_on_mobile">
                     <div class="gt3_header_builder__section-container container_full" style="background-color:#6daeb2;">
@@ -738,6 +155,8 @@
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3917"><a href="#"><span></span></a></li>
                                         </ul>
                                     </nav>
+                                    <!-- End of web Navbar -->
+                                   <!-- Start of mobile nav bar -->
                                     <div class="mobile-navigation-toggle">
                                         <div class="toggle-box">
                                             <div class="toggle-inner"></div>
@@ -851,6 +270,7 @@
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3917"><a href="#"><span></span></a></li>
                                     </ul>
                                 </nav>
+                               
                             </div>
                             <div class="gt3_header_builder_component gt3_header_builder_text_component">
                                 <div class="gt3_custom_header_btn"><img src="img/img2.jpeg" alt="Avatar" class="avatar" style=".avatar vertical-align: middle;width: 50px;height: 50px;border-radius: 50%;">
@@ -889,13 +309,12 @@
                 </div>
             </div>
         </div>
+         <!-- End of mobile navbar -->
         </div>
+        <!-- End of navbar content  -->
 
-        <!-- End of navbar section and contents of each -->
-
-        <!-- Start of container with introduction -->
-
-        <div class="gt3-page-title_wrapper">
+        <!-- Start of container with introduction-->
+<div class="gt3-page-title_wrapper">
 
             <div class="gt3-page-title gt3-page-title_horiz_align_left gt3-page-title_vert_align_middle gt3-page-title_has_img_bg" style="background-color: rgb(255, 255, 255); height: 492px; color: rgb(255, 255, 255); background-image: url(&quot;https://images.unsplash.com/photo-1578916865938-eec9924ffae0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position: center center; padding-top: 120px;">
 
@@ -920,10 +339,8 @@
             </div>
 
         </div>
-
-        <!-- End of section with introduction -->
-
-        <!-- Start of section with content -->
+        <!-- End of introduction section -->
+ <!-- Start of section with content -->
 
         <div class="site_wrapper fadeOnLoad">
             <div class="main_wrapper">
@@ -1078,61 +495,7 @@
                 </div>
             </div>
         </div>
-        <!-- <footer class="main_footer fadeOnLoad clearfix " style=" background-color :#69acb0;color:black;" id="footer">
-        
-        <div class="top_footer column_4 align-left">
-            <div class="container">
-                <div class="row" style="padding-top:66px;padding-bottom:69px;">
-                    <div class="span3">
-                        <div id="text-2" class="widget gt3_widget widget_text">
-                            <div class="textwidget">
-                                <p><img class="aligncenter" style="width: 202px;max-width: 100%;padding-top: 1px;height: auto;margin: 0" src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-white-195.png" alt=""></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <div id="nav_menu-2" class="widget gt3_widget widget_nav_menu" >
-                            <h3 class="widget-title">Quick Links</h3>
-                            <div class="menu-quick-links-container" style="color:white;">
-                                <ul id="menu-quick-links" class="menu">
-                                    <li id="menu-item-4124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-4124"><a href="https://livewp.site/wp/md/qudos/">Home</a></li>
-                                    <li id="menu-item-4120" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4105 current_page_item menu-item-4120"><a href="https://livewp.site/wp/md/qudos/news/" aria-current="page">Blog</a></li>
-                                    <li id="menu-item-4121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4121"><a href="https://livewp.site/wp/md/qudos/work/">Our Work</a></li>
-                                    <li id="menu-item-4123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4123"><a href="https://livewp.site/wp/md/qudos/community/">About</a></li>
-                                    <li id="menu-item-4122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4122"><a href="https://livewp.site/wp/md/qudos/contacts/">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <div id="nav_menu-3" class="widget gt3_widget widget_nav_menu">
-                            <h3 class="widget-title">Social</h3>
-                            <div class="menu-social-container" style="color:white;">
-                                <ul id="menu-social" class="menu">
-                                    <li id="menu-item-3872" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3872"><a href="#">Twitter</a></li>
-                                    <li id="menu-item-3873" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3873"><a href="#">Facebook</a></li>
-                                    <li id="menu-item-3874" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3874"><a href="#">Pinterest</a></li>
-                                    <li id="menu-item-3875" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3875"><a href="#">LinkedIn</a></li>
-                                    <li id="menu-item-3876" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3876"><a href="#">Instagram</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <div id="text-3" class="widget gt3_widget widget_text">
-                            <h3 class="widget-title">Contacts</h3>
-                            <div class="textwidget" style="color:white;">
-                                <p><i class="fa fa-envelope" style="color: #85cad9;padding-right: 17px"></i>support@yourname.com</p>
-                                <p><i class="fa fa-mobile-phone" style="color: #85cad9;font-size: 26px;padding-right: 23px"></i>phone: 0707963284<br> <i class="fa fa-map-marker" style="color: #85cad9;padding-right: 23px"></i>Sameer Business Park, Nairobi
-                                    Kenya</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </footer>
+       
 
 
     <!-- End of footer section -->

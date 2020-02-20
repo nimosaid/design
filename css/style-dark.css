@@ -1,8 +1,8 @@
-/* light theme code goes here */
+/* dark theme code goes here */
 /* Code created by JACOB ALFAHAD (https://codepen.io/hircinus/post/dark-light-theme-switch) */
 body {
-  background-color: white
+  background-color: black
 }
 h1, p {
-  color: black
+  color: white
 }

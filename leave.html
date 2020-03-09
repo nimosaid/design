@@ -655,62 +655,63 @@
 </head>
 
 <body translate="no">
- <html>
-<head>
-<style>
-.ul-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  background-color: #6daeb2;
+    <html>
 
-}
+    <head>
+        <style>
+            .ul-nav {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                position: fixed;
+                width: 100%;
+                background-color: #6daeb2;
+            }
+            
+            .list {
+                float: left;
+            }
+            
+            li a {
+                display: block;
+                font-size: 20px;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            
+            .active {
+                background-color: ;
+            }
+        </style>
+    </head>
 
-.list {
-  float: left;
-}
+    <body>
 
-li a {
-  display: block;
-  font-size: 20px;
+        <ul class="ul-nav">
 
-  text-align: center;
-  padding: 14px 16px;                                                                            
-  text-decoration: none;
-}
+            <li class="list">
+                <a href="qudo.html" class="link"><img class="nav-logo" src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-white-195.png" width="160px" alt="Sanergy" style="height: 60px;"></a>
+            </li>
+            <li class="list" style="float:right" class="link"><a class="active" href="#history" style="color: white;padding-top: 34px;">History</a></li>
+            <li class="list" style="float:right" class="link"><a class="active" href="#balance" style="color: white;padding-top: 34px;">Balance</a></li>
+            <li class="list" style="float:right" class="link"><a class="active" href="#opening" style="color: white;padding-top: 34px;">Form</a></li>
 
+        </ul>
 
+    </body>
 
-.active {
-  background-color: ;
-}
-</style>
-</head>
-<body>
+    </html>
 
-<ul class="ul-nav" >
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-  <li class="list"><a href="qudo.html" class="link"><img class="nav-logo" src="http://www.sanergy.com/wp-content/uploads/2018/11/logo-small-white-195.png" width="160px" alt="Sanergy" style="height: 60px;"></a></li>
-  <li class="list" style="float:right" class="link"><a class="active" href="#history" style="color: white;padding-top: 34px;">History</a></li>
-  <li class="list" style="float:right" class="link"><a class="active" href="#balance" style="color: white;padding-top: 34px;">Balance</a></li>
-  <li class="list" style="float:right" class="link"><a class="active" href="#opening" style="color: white;padding-top: 34px;">Form</a></li>
-
-</ul>
-
-</body>
-</html>
-
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   
     <section class="gallery">
         <div class="container">
             <div class="grid">
@@ -732,7 +733,7 @@ li a {
                             animation-name: fadeInLeftBig;
                         }
                     </style>
-                    <h4 style="font-size:25px;font-weight:bold;text-align: center;text-decoration: underline; "id="opening" >Request for Leave</h4>
+                    <h4 style="font-size:25px;font-weight:bold;text-align: center;text-decoration: underline; " id="opening">Request for Leave</h4>
 
                     <form>
                         <ul class="form-style-1">
@@ -750,15 +751,18 @@ li a {
                             </li>
                             <li>
                                 <label> Coverage <span class="required"></span></label>
-                                <input type="email" name="field3" class="field-long" />
+                                <input type="text" name="field3" class="field-long" />
                             </li>
 
                             <li>
                                 <label>Comments <span class="required"></span></label>
                                 <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
                             </li>
+                            
                             <li>
-                                <input type="submit" value="Submit" />
+                            <div id="alert-link">
+                            <input type="submit" class="open-modal" href="#modal"value="View leave days" />
+                            </div>
                             </li>
                         </ul>
                     </form>
@@ -858,6 +862,80 @@ li a {
                         .form-style-1 .required {
                             color: red;
                         }
+                    </style>
+                    <style>
+                    $blue: #2971d4
+$purple: purple
+$gray: #e5e5e5
+
+*, div
+  box-sizing: border-box
+  font-family: sans-serif
+  text-align: center
+  
+.modal-container, .prompt-container
+  &:before
+    content: ""
+    background-color: rgba(0,0,0,0.6)
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+  &:closed
+    display: none
+  
+.modal, .prompt
+  position: fixed
+  top: 50px
+  left: 0px
+  right: 0px
+  margin: 0 auto
+  display: block
+  background: white
+  padding: 40px
+  width: 600px
+  max-width: 100%
+  z-index: 1
+
+
+button
+  border: none
+  background-color: transparent
+  font-weight: bold
+  color: $blue
+  font-size: 14px
+  padding: 15px
+  cursor: pointer
+  float: right
+  outline: none
+  &:hover
+    background-color: $gray
+  
+input
+  width: 100%
+  outline: none
+  padding: 10px 0
+  margin-bottom: 10px
+  
+button#btn-ok, button#btn-cancel
+  border: none
+  background-color: transparent
+  font-weight: bold
+  color: $blue
+  font-size: 14px
+  padding: 15px
+  cursor: pointer
+  outline: none
+  float: right
+  &:hover
+    background-color: $gray
+  
+button#btn-cancel
+  color: $gray
+  &:hover
+    background-color: transparent
                     </style>
                     <br>
                 </div>
@@ -981,32 +1059,32 @@ li a {
 
                                     <div class="col col-2" data-label="Customer Name">1/2/3030</div>
                                     <div class="col col-3" data-label="Amount">Tuesday</div>
-                                    <div class="col col-4" data-label="Payment Status">  <input type="tel" id="phone" name="phone" placeholder="0.0" ></div>
-                                    
+                                    <div class="col col-4" data-label="Payment Status"> <input type="tel" id="phone" name="phone" placeholder="0.0"></div>
+
                                 </li>
                                 <hr>
                                 <li class="table-row">
 
                                     <div class="col col-2" data-label="Customer Name">2/2/3030</div>
                                     <div class="col col-3" data-label="Amount">Wednesday</div>
-                                    <div class="col col-4" data-label="Payment Status"><input type="tel" id="phone" name="phone" placeholder="0.0" ></div>
-                                    
+                                    <div class="col col-4" data-label="Payment Status"><input type="tel" id="phone" name="phone" placeholder="0.0"></div>
+
                                 </li>
                                 <hr>
                                 <li class="table-row">
 
                                     <div class="col col-2" data-label="Customer Name">3/2/3030</div>
                                     <div class="col col-3" data-label="Amount">Thursday</div>
-                                    <div class="col col-4" data-label="Payment Status"><input type="tel" id="phone" name="phone" placeholder="0.0" ></div>
-                                    
+                                    <div class="col col-4" data-label="Payment Status"><input type="tel" id="phone" name="phone" placeholder="0.0"></div>
+
                                 </li>
                                 <hr>
                                 <li class="table-row">
 
                                     <div class="col col-2" data-label="Customer Name">4/2/3030</div>
                                     <div class="col col-3" data-label="Amount">Friday</div>
-                                    <div class="col col-4" data-label="Payment Status"><input type="tel" id="phone" name="phone" placeholder="0.0" ></div>
-                                    
+                                    <div class="col col-4" data-label="Payment Status"><input type="tel" id="phone" name="phone" placeholder="0.0"></div>
+
                                 </li>
                             </ul>
                         </div>
@@ -1482,6 +1560,7 @@ li a {
                 </div>
             </div>
         </div>
+        
     </footer>
     <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-9bf952ccbbd13c245169a0a1190323a27ce073a3d304b8c0fdf421ab22794a58.js"></script>
     <script id="rendered-js">

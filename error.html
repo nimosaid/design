@@ -1,0 +1,84 @@
+<html lang="en" class="js canvas borderradius boxshadow cssanimations csstransforms csstransforms3d csstransitions svg no-overflowtouch ng-scope"><head>
+
+<meta charset="UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - Alert, confirm and prompt dialogs</title>
+<link rel="stylesheet" href="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.0-beta/build/css/onsenui.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.0-beta/build/css/onsen-css-components.css">
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"></head>
+<body translate="no">
+<ons-page class="page"><ons-toolbar class="navigation-bar" style="position: absolute; z-index: 10000; left: 0px; right: 0px; top: 0px;"><div class="center navigation-bar__title navigation-bar__center">
+Notifications
+</div></ons-toolbar>
+
+
+<div class="page__background"></div><div class="page__content ons-page-inner" no-status-bar-fill=""><ons-list ng-controller="NotificationController" class="ng-scope list ons-list-inner">
+<ons-list-item ng-click="alert()" modifier="tappable" class="list__item ons-list-item-inner list__item--tappable">
+Alert
+</ons-list-item>
+<ons-list-item ng-click="confirm()" modifier="tappable" class="list__item ons-list-item-inner list__item--tappable">
+Confirm
+</ons-list-item>
+<ons-list-item ng-click="prompt()" modifier="tappable" class="list__item ons-list-item-inner list__item--tappable">
+Prompt
+</ons-list-item>
+</ons-list></div></ons-page>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-db44b196776521ea816683afab021f757616c80860d31da6232dedb8d7cc4862.js"></script>
+<script src="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.0-beta/build/js/angular/angular.min.js"></script>
+<script src="https://cdn.rawgit.com/OnsenUI/OnsenUI/1.3.0-beta/build/js/onsenui.min.js"></script>
+<script id="rendered-js">
+ons.bootstrap().
+
+controller('NotificationController', function ($scope) {
+  $scope.alert = function () {
+    ons.notification.alert({ message: 'An error has occurred!' });
+  };
+
+  $scope.confirm = function () {
+    ons.notification.confirm({
+      message: 'Are you sure you want to continue?',
+      callback: function (idx) {
+        switch (idx) {
+          case 0:
+            ons.notification.alert({
+              message: 'You pressed "Cancel".' });
+
+            break;
+          case 1:
+            ons.notification.alert({
+              message: 'You pressed "OK".' });
+
+            break;}
+
+      } });
+
+  };
+
+  $scope.prompt = function () {
+    ons.notification.prompt({
+      message: "Please enter your age",
+      callback: function (age) {
+        ons.notification.alert({
+          message: 'You are ' + parseInt(age || 0) + ' years old.' });
+
+      } });
+
+  };
+});
+//# sourceURL=pen.js
+    </script>
+
+
+<ons-alert-dialog animation="default" class="alert-dialog ng-scope" style="display: block; z-index: 20001;" data-animit-orig-style="display: block; z-index: 20001;"><div class="alert-dialog-title">Alert</div><div class="alert-dialog-content">An error has occurred!</div><div class="alert-dialog-footer alert-dialog-footer--one"><button class="alert-dialog-button alert-dialog-button--primal alert-dialog-button--one">OK</button></div></ons-alert-dialog><div class="alert-dialog-mask" style="z-index: 20000; display: block; opacity: 1; transition: all 0.2s cubic-bezier(0.1, 0.7, 0.4, 1) 0s;" data-animit-orig-style="z-index: 20000; display: block; opacity: 1;"></div></body></html>
